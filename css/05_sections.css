@@ -11,9 +11,7 @@
     left: 0;
     width: 100%;
     z-index: 1001;
-    background-color: rgba(12, 14, 18, 0.85); /* Dunkleres Anthrazit für besseren Kontrast */
-    backdrop-filter: blur(30px);
-    -webkit-backdrop-filter: blur(30px);
+    background-color: #0c0e12; /* Solides Anthrazit, kein Glass-Morphismus mehr! */
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
