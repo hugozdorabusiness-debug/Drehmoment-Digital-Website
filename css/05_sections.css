@@ -32,12 +32,12 @@
 }
 
 .header-logo-img {
-    height: 75px; /* Präsent aber nicht erschlagend */
+    height: 90px;
     width: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
     display: block;
-    filter: brightness(0) invert(1) contrast(1.2); /* Invertiert für dunklen Hintergrund */
-    opacity: 0.95;
+    filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.4)); /* Sanftes weißes Glühen für Lesbarkeit */
+    opacity: 1;
 }
 
 .nav-links {
@@ -138,7 +138,7 @@
 }
 
 .hero-colored-logo {
-    height: 100px;
+    height: 150px;
     margin-bottom: 2.5rem;
     display: block;
 }
@@ -471,7 +471,7 @@
     .logo-container {
         height: auto;
     }
-    .header-logo-img { height: 50px; }
+    .header-logo-img { height: 60px; }
     .mobile-nav-toggle { display: flex; }
     .cta-nav { display: none; }
     
@@ -506,7 +506,7 @@
     }
     .hero-colored-logo {
         margin: 0 auto 2rem auto;
-        height: 70px;
+        height: 100px;
     }
     .hero-grid {
         text-align: center;
