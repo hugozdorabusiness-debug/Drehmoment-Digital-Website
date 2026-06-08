@@ -270,8 +270,8 @@
 /* KONTROLLE & POSITIONIERUNG (Folie 3) */
 .kontrolle-grid {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 5rem;
+    grid-template-columns: 1.25fr 0.75fr;
+    gap: 4rem;
     align-items: center;
 }
 
