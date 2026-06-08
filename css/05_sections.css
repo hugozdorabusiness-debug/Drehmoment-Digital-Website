@@ -790,7 +790,7 @@
 
 .contact-form {
     background: #fff;
-    padding: 3rem 4rem; /* Reduced from 4.5rem */
+    padding: 2.5rem 3rem; /* Further reduced */
     border-radius: var(--radius-lg);
     box-shadow: var(--shadow-md);
     border: 1px solid rgba(0, 0, 0, 0.05);
