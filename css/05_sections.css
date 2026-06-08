@@ -441,7 +441,7 @@
 /* TIMELINE ACCORDION */
 .timeline-container {
     position: relative;
-    max-width: 1000px;
+    max-width: 1200px;
     margin: 4rem auto;
     padding: 2rem 0;
 }
@@ -467,17 +467,17 @@
 
 .timeline-node {
     position: absolute;
-    left: 50%; top: 15px;
+    left: 50%; top: 5px;
     transform: translateX(-50%);
-    width: 60px; height: 60px;
+    width: 80px; height: 80px;
     background: #fff;
-    border: 4px solid var(--accent-orange);
+    border: 5px solid var(--accent-orange);
     color: var(--accent-orange);
     border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
-    font-size: 1.8rem; font-weight: 900; font-family: var(--font-mono);
+    font-size: 2.5rem; font-weight: 900; font-family: var(--font-mono);
     z-index: 2;
-    box-shadow: 0 4px 15px rgba(232, 84, 10, 0.25);
+    box-shadow: 0 6px 20px rgba(232, 84, 10, 0.3);
 }
 
 .timeline-content-acc {
@@ -498,7 +498,7 @@
 .timeline-step.step-left .timeline-content-acc::after {
     content: '';
     position: absolute;
-    right: -10px; top: 30px;
+    right: -10px; top: 40px;
     border-width: 10px 0 10px 10px;
     border-style: solid;
     border-color: transparent transparent transparent #fff;
@@ -508,7 +508,7 @@
 .timeline-step.step-right .timeline-content-acc::after {
     content: '';
     position: absolute;
-    left: -10px; top: 30px;
+    left: -10px; top: 40px;
     border-width: 10px 10px 10px 0;
     border-style: solid;
     border-color: transparent #fff transparent transparent;
@@ -743,19 +743,19 @@
         gap: 3rem;
     }
     
-    .timeline-line { left: 25px; transform: none; }
-    .timeline-node { left: 0; transform: none; width: 50px; height: 50px; font-size: 1.5rem; top: 15px; }
+    .timeline-line { left: 30px; transform: none; }
+    .timeline-node { left: 0; transform: none; width: 60px; height: 60px; font-size: 1.8rem; top: 10px; border-width: 4px; }
     .timeline-step.step-left, .timeline-step.step-right { justify-content: flex-end; }
-    .timeline-content-acc { width: calc(100% - 60px); }
+    .timeline-content-acc { width: calc(100% - 80px); }
     .timeline-summary { padding: 1.5rem; }
     .timeline-details { padding: 0 1.5rem 1.5rem 1.5rem; }
     
     .timeline-step.step-left .timeline-content-acc::after,
     .timeline-step.step-right .timeline-content-acc::after {
-        left: -8px; right: auto;
-        border-width: 8px 8px 8px 0;
+        left: -10px; right: auto;
+        border-width: 10px 10px 10px 0;
         border-color: transparent #fff transparent transparent;
-        top: 25px;
+        top: 30px;
         filter: drop-shadow(-2px 0 2px rgba(0,0,0,0.02));
     }
     .contact-info h2 { font-size: 2.8rem !important; }
