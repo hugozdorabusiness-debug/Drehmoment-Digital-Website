@@ -39,6 +39,12 @@ body::before {
     padding: 0 2rem;
 }
 
+.container-wide {
+    max-width: 1550px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
 .section-padding {
     padding: 10rem 0;
 }
