@@ -20,26 +20,37 @@
 
 <body>
 
-    <!-- ================== TUNNEL HEADER ================== -->
-    <header class="site-header subpage-header">
+    <!-- ================== HEADER (Mit Navigation & Zurück-Button links) ================== -->
+    <header class="site-header">
         <div class="header-inner">
-            <div class="logo-container" style="display: flex; align-items: center; gap: 2rem;">
-                <a href="index.html" class="logo-link">
-                    <img src="./drehmoment_digital_transparent-removeb ohne supslogan.png" alt="Drehmoment Digital Logo" class="header-logo-img">
-                </a>
-                <a href="javascript:history.back()" class="back-btn">
+            <div class="logo-container" style="display: flex; align-items: center; gap: 1.5rem;">
+                <!-- BACK BUTTON GANZ LINKS -->
+                <a href="javascript:history.back()" class="back-btn" title="Zurück">
                     <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
                     Zurück
                 </a>
+                
+                <a href="index.html" class="logo-link">
+                    <img src="./drehmoment_digital_transparent-removeb ohne supslogan.png" alt="Drehmoment Digital Logo" class="header-logo-img">
+                </a>
             </div>
             
+            <nav class="nav-links">
+                <a href="index.html">Start</a>
+                <a href="index.html#warum-wir">Warum wir?</a>
+                <a href="index.html#zielgruppen">Für wen?</a>
+                <a href="index.html#prozess">Prozess</a>
+                <a href="index.html#loesung">System</a>
+                <a href="index.html#projekte">Ergebnisse</a>
+            </nav>
+
             <div class="cta-nav">
                 <a href="index.html#kontakt" class="btn-primary">
                     JETZT KONTAKT AUFNEHMEN &rarr;
                 </a>
             </div>
             <!-- Mobile Toggle Button -->
-            <button class="mobile-nav-toggle" aria-label="Menü öffnen" style="display: none;">
+            <button class="mobile-nav-toggle" aria-label="Menü öffnen">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -55,58 +66,93 @@
                     <p class="lead">Fehlende Fachkräfte, explodierende Kosten und eine fast unsteuerbare Kundenflut. Die goldene Regel heute lautet nicht mehr "Wer hat die meisten Kunden?", sondern "Wer hat die lukrativsten Kunden und die effizientesten Prozesse?".</p>
                 </div>
                 
+                <!-- 30% BILD MIT GLASMORPHISMUS -->
                 <div class="subpage-hero-visual">
-                    <div style="font-family: var(--font-mono); color: #94A3B8; font-size: 0.85rem; margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 0.5rem;">
-                        <span style="display: inline-block; width: 8px; height: 8px; background: var(--accent-orange); border-radius: 50%; margin-right: 5px; box-shadow: 0 0 10px var(--accent-orange);"></span>
-                        SYSTEM_STATUS: AKTIV
+                    <img src="./werkstatt_clean_empty.png" alt="Cleane, hochmoderne KFZ Werkstatt" class="subpage-hero-img">
+                    <div class="subpage-hero-glass"></div>
+                    
+                    <div style="position: absolute; bottom: 2.5rem; left: 2rem; right: 2rem; z-index: 2;">
+                        <div style="font-family: var(--font-mono); color: rgba(255,255,255,0.7); font-size: 0.85rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 0.5rem; margin-bottom: 1rem;">
+                            <span style="display: inline-block; width: 8px; height: 8px; background: var(--accent-orange); border-radius: 50%; margin-right: 5px; box-shadow: 0 0 10px var(--accent-orange);"></span>
+                            SYSTEM_STATUS: AKTIV
+                        </div>
+                        <h3 style="color: #fff; font-size: 1.4rem; font-weight: 800; line-height: 1.3;">Die digitale Werkstatt als Leitbetrieb der Region.</h3>
                     </div>
-                    <h3 style="color: #fff; font-size: 1.3rem; margin-bottom: 1rem;">Die 3 Säulen der digitalen Werkstatt:</h3>
-                    <ul style="list-style: none; padding: 0; color: #cbd5e1; line-height: 1.6;">
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
-                            <span style="color: var(--accent-orange); font-size: 1.2rem;">⚡</span> 
-                            Sichtbarkeit als Leitbetrieb
-                        </li>
-                        <li style="margin-bottom: 0.8rem; display: flex; align-items: center; gap: 0.8rem;">
-                            <span style="color: var(--accent-orange); font-size: 1.2rem;">⚡</span> 
-                            Automatischer Kunden-Filter
-                        </li>
-                        <li style="display: flex; align-items: center; gap: 0.8rem;">
-                            <span style="color: var(--accent-orange); font-size: 1.2rem;">⚡</span> 
-                            Entlastung des Telefons
-                        </li>
-                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ================== CONTENT SPIELFELD (Rot/Grün) ================== -->
+    <!-- ================== CONTENT STORYLINE (MASSIVER AUSBAU) ================== -->
     <section class="section-padding" style="background-color: var(--bg-surface);">
         <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
-                <p class="warum-kicker fade-up" style="color: var(--accent-orange); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Wir verstehen Ihren Alltag</p>
-                <h2 class="fade-up" style="font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem; color: #1e293b; font-weight: 900;">Struktur statt Chaos.</h2>
-                <p class="fade-up" style="font-size: 1.15rem; color: #64748b; line-height: 1.6;">
-                    Das Telefon klingelt ununterbrochen. Der Hof steht voll. Aber wie viele dieser Aufträge sind wirklich rentabel? Und wie viel Zeit geht für sinnlose Preisanfragen drauf? Mit einer sauberen digitalen Infrastruktur drehen wir den Spieß um.
+            
+            <!-- Teil 1: Die Ausgangslage & Unsere Methode -->
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-bottom: 8rem; align-items: center;">
+                <div class="fade-up">
+                    <p class="warum-kicker" style="color: var(--accent-orange); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Wir verstehen Ihren Alltag</p>
+                    <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem; color: #1e293b; font-weight: 900;">Wie hat sich der Markt verändert?</h2>
+                    <p style="font-size: 1.15rem; color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">
+                        Das Telefon klingelt ununterbrochen. Der Hof steht voll. Aber wie viele dieser Aufträge sind wirklich rentabel? Und wie viel Zeit geht für sinnlose Preisanfragen drauf?
+                    </p>
+                    <p style="font-size: 1.15rem; color: #64748b; line-height: 1.6;">
+                        Neuwagen werden unbezahlbar, weshalb immer mehr Menschen ihre alten Fahrzeuge reparieren lassen. Was nach einem Segen klingt, wird im Alltag schnell zur Belastungsprobe, wenn die digitale Struktur fehlt. Wir bauen Systeme, die genau diesen Engpass lösen.
+                    </p>
+                </div>
+
+                <!-- Die 3 Säulen Box (Von oben hierher gezogen) -->
+                <div class="fade-up" style="background: #fff; border-radius: 16px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05);">
+                    <h3 style="color: #334155; font-size: 1.5rem; margin-bottom: 2rem; font-weight: 800;">Die 3 Säulen der digitalen Werkstatt</h3>
+                    <ul style="list-style: none; padding: 0; color: #475569; line-height: 1.6;">
+                        <li style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.2rem;">
+                            <div style="background: rgba(232,84,10,0.1); color: var(--accent-orange); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">⚡</div> 
+                            <div>
+                                <strong style="display: block; color: #1e293b; font-size: 1.15rem; margin-bottom: 0.3rem;">Sichtbarkeit als Leitbetrieb</strong>
+                                Treten Sie online exakt so professionell auf, wie Sie in der Werkstatt arbeiten. Das weckt Vertrauen.
+                            </div>
+                        </li>
+                        <li style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.2rem;">
+                            <div style="background: rgba(232,84,10,0.1); color: var(--accent-orange); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">⚡</div> 
+                            <div>
+                                <strong style="display: block; color: #1e293b; font-size: 1.15rem; margin-bottom: 0.3rem;">Automatischer Kunden-Filter</strong>
+                                Halten Sie Preisdrücker fern und ziehen Sie zahlungskräftige Premium-Kunden an.
+                            </div>
+                        </li>
+                        <li style="display: flex; align-items: flex-start; gap: 1.2rem;">
+                            <div style="background: rgba(232,84,10,0.1); color: var(--accent-orange); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">⚡</div> 
+                            <div>
+                                <strong style="display: block; color: #1e293b; font-size: 1.15rem; margin-bottom: 0.3rem;">Entlastung des Telefons</strong>
+                                Verlagern Sie Terminbuchungen und Erst-Infos ins Internet, damit Sie in Ruhe schrauben können.
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Teil 2: Die Gegenüberstellung -->
+            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
+                <h2 class="fade-up" style="font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.15; margin-bottom: 1.5rem; color: #1e293b; font-weight: 900;">Struktur statt Chaos.</h2>
+                <p class="fade-up" style="font-size: 1.2rem; color: #64748b; line-height: 1.6;">
+                    Der direkte Vergleich: So verändert ein strategischer digitaler Auftritt Ihren Werkstatt-Alltag von Grund auf.
                 </p>
             </div>
 
-            <div class="comparison-grid fade-up">
+            <div class="comparison-grid fade-up" style="margin-bottom: 8rem;">
                 <div class="comparison-card bad">
-                    <h3 style="color: #334155; font-size: 1.4rem; margin-bottom: 0.5rem;">Ohne digitale Struktur</h3>
-                    <p style="color: #64748b; font-size: 0.95rem;">Der klassische, kräftezehrende Werkstatt-Alltag.</p>
-                    <ul class="comp-list bad-list">
+                    <h3 style="color: #334155; font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 800;">Ohne digitale Struktur</h3>
+                    <p style="color: #64748b; font-size: 1rem;">Der klassische, kräftezehrende Werkstatt-Alltag.</p>
+                    <ul class="comp-list bad-list" style="margin-top: 2rem;">
                         <li><strong>Dauerndes Telefonklingeln</strong> für simple Preisanfragen (Ölwechsel, Reifen).</li>
                         <li><strong>Preisdrücker:</strong> Kunden vergleichen Sie nur über den Preis ("Was letzte Preis?").</li>
                         <li><strong>Termin-Chaos:</strong> Manuelle Zettelwirtschaft und unübersichtliche WhatsApp-Nachrichten.</li>
-                        <li><strong>Personalmangel:</strong> Gute Mitarbeiter sehen keine moderne Perspektive.</li>
+                        <li><strong>Personalmangel:</strong> Gute Mitarbeiter sehen keine moderne Perspektive im Betrieb.</li>
                     </ul>
                 </div>
 
                 <div class="comparison-card good">
-                    <h3 style="color: #10b981; font-size: 1.4rem; margin-bottom: 0.5rem;">Mit Drehmoment-System</h3>
-                    <p style="color: #64748b; font-size: 0.95rem;">Sie übernehmen wieder die absolute Kontrolle.</p>
-                    <ul class="comp-list good-list">
+                    <h3 style="color: #10b981; font-size: 1.5rem; margin-bottom: 0.5rem; font-weight: 800;">Mit Drehmoment-System</h3>
+                    <p style="color: #64748b; font-size: 1rem;">Sie übernehmen wieder die absolute Kontrolle.</p>
+                    <ul class="comp-list good-list" style="margin-top: 2rem;">
                         <li><strong>Der Filter:</strong> Die Website schreckt Pfennigfuchser gezielt ab.</li>
                         <li><strong>Premium-Kunden:</strong> Fokus auf lukrative Fälle wie Motoren- oder Getriebeschäden.</li>
                         <li><strong>Automatisierung:</strong> Termine werden online rund um die Uhr gebucht, das Telefon schweigt.</li>
@@ -114,6 +160,32 @@
                     </ul>
                 </div>
             </div>
+            
+            <!-- Teil 3: Abschließendes Trust-Element -->
+            <div class="fade-up" style="background: #1e293b; border-radius: 20px; padding: 5rem 3rem; text-align: center; color: #fff; position: relative; overflow: hidden;">
+                <!-- Decorative Circle -->
+                <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 150%; background: radial-gradient(circle, rgba(232,84,10,0.1) 0%, transparent 70%);"></div>
+                
+                <div style="position: relative; z-index: 2;">
+                    <h3 style="font-size: clamp(1.8rem, 3vw, 2.5rem); margin-bottom: 1.5rem; font-weight: 900;">Wir bauen Systeme, keine Bastel-Seiten.</h3>
+                    <p style="font-size: 1.15rem; color: #94A3B8; max-width: 800px; margin: 0 auto 4rem auto; line-height: 1.7;">
+                        Eine Website bringt Ihnen nichts, wenn sie wie eine digitale Visitenkarte im Netz verstaubt. Wir bauen interaktive Vertriebsmaschinen, die als ihr härtester, rund um die Uhr arbeitender Mitarbeiter fungieren – ohne jemals krank zu werden.
+                    </p>
+                    <div style="display: flex; gap: 2rem; justify-content: center; flex-wrap: wrap;">
+                        <div style="text-align: left; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; width: 280px; backdrop-filter: blur(10px);">
+                            <span style="color: var(--accent-orange); font-size: 2rem; font-weight: 900; font-family: var(--font-mono);">01</span>
+                            <h4 style="color: #fff; margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.2rem;">Sichtbar in Ihrer Stadt</h4>
+                            <p style="color: #94A3B8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Lokales SEO sorgt dafür, dass Sie bei Google vor der lokalen Konkurrenz stehen.</p>
+                        </div>
+                        <div style="text-align: left; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.05); padding: 2rem; border-radius: 12px; width: 280px; backdrop-filter: blur(10px);">
+                            <span style="color: var(--accent-orange); font-size: 2rem; font-weight: 900; font-family: var(--font-mono);">02</span>
+                            <h4 style="color: #fff; margin-top: 1rem; margin-bottom: 0.5rem; font-size: 1.2rem;">Messbare Ergebnisse</h4>
+                            <p style="color: #94A3B8; font-size: 0.95rem; margin: 0; line-height: 1.5;">Sie sehen genau, wie viele Anfragen über Ihre neue digitale Struktur generiert werden.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </section>
 
@@ -156,15 +228,15 @@
         </div>
     </section>
 
-    <!-- ================== TARGET CTA ================== -->
+    <!-- ================== TARGET CTA (FLACHER) ================== -->
     <section class="subpage-cta">
         <div class="subpage-cta-inner container fade-up">
             <h2>Bereit, das Steuer zu übernehmen?</h2>
-            <p>Lassen Sie uns in einem ehrlichen, unverbindlichen Gespräch herausfinden, wo Ihr größter digitaler Hebel liegt. Keine leeren Versprechungen – nur Klartext.</p>
+            <p>Lassen Sie uns in einem ehrlichen Gespräch herausfinden, wo Ihr größter Hebel liegt. Keine leeren Versprechungen.</p>
             <a href="index.html#kontakt" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Kostenloses Erstgespräch vereinbaren &rarr;</a>
 
             <!-- Sub-Profile Navigation -->
-            <div class="cta-profiles-grid">
+            <div class="cta-profiles-grid fade-up">
                 <a href="mischbetrieb.html" class="cta-profile-card">
                     <h4>Werkstatt & Handel</h4>
                     <p>Mischbetrieb? Wir entwirren Ihr Geschäftsmodell.</p>
@@ -258,6 +330,17 @@
                     });
                 });
             });
+
+            // Mobile Nav Toggle
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if(mobileToggle && navLinks) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    document.body.classList.toggle('nav-open');
+                });
+            }
         });
     </script>
 </body>

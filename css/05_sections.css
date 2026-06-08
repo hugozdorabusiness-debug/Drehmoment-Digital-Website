@@ -883,7 +883,7 @@
 }
 .subpage-hero-grid {
     display: grid;
-    grid-template-columns: 1.5fr 1fr;
+    grid-template-columns: 7fr 3fr; /* Echtes 70/30 Layout */
     gap: 4rem;
     align-items: center;
 }
@@ -893,12 +893,24 @@
 .subpage-hero-visual {
     position: relative;
     border-radius: 16px;
-    background: rgba(255,255,255,0.02);
+    overflow: hidden; /* Für das Bild */
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    aspect-ratio: 4/5;
+}
+.subpage-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.subpage-hero-glass {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(12, 14, 18, 0.9) 0%, rgba(12, 14, 18, 0.4) 100%);
+    backdrop-filter: blur(3px); /* Leichter Blur über dem Bild */
     border: 1px solid rgba(255,255,255,0.05);
-    padding: 2.5rem;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-    text-align: left;
+    border-radius: 16px;
+    pointer-events: none;
 }
 .subpage-kicker {
     color: var(--accent-orange);
@@ -974,25 +986,25 @@
 /* Target CTA */
 .subpage-cta {
     background-color: var(--panel-dark);
-    padding: 5rem 0; /* Flacher gemacht */
+    padding: 3.5rem 0; /* Deutlich flacher gemacht (50% Viewport-Ziel) */
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 .subpage-cta-inner {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
 }
 .subpage-cta h2 {
     color: #fff;
-    font-size: clamp(2rem, 4vw, 2.8rem);
-    margin-bottom: 1rem;
+    font-size: clamp(1.8rem, 3.5vw, 2.5rem); /* Etwas kleiner für weniger Höhe */
+    margin-bottom: 0.8rem;
     line-height: 1.2;
 }
 .subpage-cta p {
     color: #94A3B8;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-    line-height: 1.6;
+    font-size: 1.05rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
 }
 
 /* Subpage CTA Profiles (Die 3 Mini-Buttons unten) */
@@ -1000,14 +1012,14 @@
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.5rem;
-    margin-top: 4rem;
-    padding-top: 4rem;
+    margin-top: 3rem;
+    padding-top: 3rem;
     border-top: 1px dashed rgba(255,255,255,0.1);
 }
 .cta-profile-card {
-    background: rgba(255,255,255,0.02);
-    border: 1px solid rgba(255,255,255,0.05);
-    padding: 1.5rem;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    padding: 1.8rem; /* Größerer Innenabstand */
     border-radius: 12px;
     text-align: left;
     text-decoration: none;
@@ -1018,20 +1030,22 @@
     justify-content: center;
 }
 .cta-profile-card:hover {
-    background: rgba(255,255,255,0.05);
-    border-color: rgba(255,255,255,0.15);
-    transform: translateY(-3px);
+    background: rgba(255,255,255,0.06);
+    border-color: var(--accent-orange);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 20px rgba(232,84,10,0.1);
 }
 .cta-profile-card h4 {
     color: var(--accent-orange);
-    margin-bottom: 0.5rem;
-    font-size: 1.05rem;
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem; /* Größere Schrift */
+    font-weight: 800;
 }
 .cta-profile-card p {
-    color: #94A3B8;
-    font-size: 0.9rem;
+    color: #cbd5e1; /* Hellerer Text für bessere Lesbarkeit */
+    font-size: 0.95rem;
     margin: 0;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 /* Subpage Comparison Grid (Rot/Grün) */
