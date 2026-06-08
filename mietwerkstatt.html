@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Für Mietwerkstätten | Drehmoment Digital</title>
+    <meta name="description" content="Bühnen digital vermieten und den Kalender automatisieren. Machen Sie Schluss mit Chaos bei der Hebebühnen-Reservierung.">
+
+    <link rel="icon" type="image/png" href="logo_transparent.png">
+    <link rel="stylesheet" href="css/01_variables.css">
+    <link rel="stylesheet" href="css/02_typography.css">
+    <link rel="stylesheet" href="css/03_layout.css">
+    <link rel="stylesheet" href="css/04_components.css">
+    <link rel="stylesheet" href="css/05_sections.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="logo-container" style="display: flex; align-items: center; gap: 1.5rem;">
+                <a href="javascript:history.back()" class="back-btn" title="Zurück">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                    Zurück
+                </a>
+                <a href="index.html" class="logo-link">
+                    <img src="./drehmoment_digital_transparent-removeb ohne supslogan.png" alt="Drehmoment Digital Logo" class="header-logo-img">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html">Start</a>
+                <a href="index.html#warum-wir">Warum wir?</a>
+                <a href="index.html#zielgruppen">Für wen?</a>
+                <a href="index.html#prozess">Prozess</a>
+                <a href="index.html#loesung">System</a>
+            </nav>
+            <div class="cta-nav">
+                <a href="index.html#kontakt" class="btn-primary">JETZT KONTAKT AUFNEHMEN &rarr;</a>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- HERO -->
+    <section class="subpage-hero">
+        <div class="container fade-up">
+            <div class="subpage-hero-grid">
+                <div class="subpage-hero-text">
+                    <span class="subpage-kicker">Mietwerkstätten</span>
+                    <h1>Volle Bühnen, <br><span class="highlight-text">leeres Telefon</span>.</h1>
+                    <p class="lead">Bei einer Mietwerkstatt verkaufen Sie keine stundenlange Handwerksarbeit, sondern reine Zeit-Slots. Jeder Anruf zur Buchung kostet Marge. Wir bauen Ihnen eine Plattform, die Bühnen vollautomatisch belegt und abkassiert.</p>
+                </div>
+                
+                <div class="subpage-hero-visual">
+                    <img src="assets/target_mietwerkstatt.png" alt="Mietwerkstatt und Hebebühne" class="subpage-hero-img">
+                    <div class="subpage-hero-glass"></div>
+                    <div style="position: absolute; bottom: 2rem; left: 2rem; background: rgba(12, 14, 18, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 1rem 1.5rem; border-radius: 12px; z-index: 2; display: flex; align-items: center; gap: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
+                        <span style="display: block; width: 12px; height: 12px; background: #3b82f6; border-radius: 50%; box-shadow: 0 0 12px #3b82f6;"></span>
+                        <span style="color: #fff; font-family: var(--font-mono); font-size: 0.95rem; letter-spacing: 1.5px;">BOOKING: LIVE</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENT: INDIVIDUELLES ELEMENT (Dashboard Rings) -->
+    <section class="section-padding" style="background-color: var(--bg-surface);">
+        <div class="container">
+            
+            <div class="fade-up" style="text-align: center; max-width: 900px; margin: 0 auto 4rem auto;">
+                <p class="warum-kicker" style="color: var(--accent-orange); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem;">Die Automatisierungs-Matrix</p>
+                <h2 style="font-size: clamp(2.5rem, 4vw, 3.8rem); line-height: 1.15; margin-bottom: 2rem; color: #1e293b; font-weight: 900;">
+                    Machen Sie sich <br><span style="color: var(--accent-orange);">komplett überflüssig.</span>
+                </h2>
+                <p style="font-size: 1.25rem; color: #64748b; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Eine Mietwerkstatt ist ein Skalierungsgeschäft. Wenn Sie jede halbe Stunde ans Telefon gehen müssen, weil jemand eine Hebebühne für den Nachmittag braucht, sind Sie im eigenen Betrieb gefangen.
+                </p>
+            </div>
+
+            <!-- DASHBOARD RINGS -->
+            <div class="dashboard-grid fade-up" style="margin-bottom: 8rem;">
+                <div class="dash-ring-card">
+                    <div class="dash-ring" style="border-top-color: #10b981;">100%</div>
+                    <h3>Digitale Buchung</h3>
+                    <p>Kunden sehen in Echtzeit, welche Hebebühnen frei sind, und buchen ihren Slot direkt online – auch nachts um 3 Uhr.</p>
+                </div>
+                
+                <div class="dash-ring-card">
+                    <div class="dash-ring" style="border-top-color: #3b82f6;">Zero</div>
+                    <h3>No-Show Schutz</h3>
+                    <p>Wir integrieren Anzahlungen oder Kautionen direkt in den Buchungsprozess. Wer reserviert und nicht kommt, kostet Sie kein Geld mehr.</p>
+                </div>
+
+                <div class="dash-ring-card">
+                    <div class="dash-ring" style="border-top-color: var(--accent-orange);">24/7</div>
+                    <h3>Zusatz-Umsatz</h3>
+                    <p>Braucht der Kunde Werkzeugwagen? Öl-Entsorgung? Spezial-Abzieher? Das alles bucht (und zahlt) er im Prozess als Upsell direkt dazu.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="faq-section">
+        <div class="faq-container fade-up">
+            <p class="warum-kicker" style="text-align: center; color: var(--accent-orange);">Häufige Fragen</p>
+            <h2 style="text-align: center; font-size: clamp(2rem, 3vw, 2.8rem); margin-bottom: 3rem; color: #1e293b; font-weight: 900;">Mietwerkstatt-Insights</h2>
+            
+            <details class="faq-item">
+                <summary class="faq-summary">
+                    Was passiert, wenn jemand länger schraubt als gebucht?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="faq-content">
+                    Das System kommuniziert klare Puffer-Zeiten. Für den Betrieb vor Ort implementieren wir in Absprache mit Ihnen saubere AGBs und Nachzahl-Strukturen, die der Kunde bei der Online-Buchung bereits akzeptieren muss.
+                </div>
+            </details>
+
+            <details class="faq-item">
+                <summary class="faq-summary">
+                    Können Kunden direkt online bezahlen?
+                    <svg class="faq-icon" width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
+                </summary>
+                <div class="faq-content">
+                    Ja. Wir können Payment-Provider (PayPal, Kreditkarte, Klarna) einbinden. So haben Sie das Geld für die Bühnen-Miete schon sicher auf dem Konto, bevor das Auto überhaupt in die Halle gerollt ist.
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- TARGET CTA (Verweist auf die anderen 2!) -->
+    <section class="subpage-cta">
+        <div class="subpage-cta-inner container fade-up">
+            <h2>Bereit für den Autopiloten?</h2>
+            <p>Lassen Sie uns Ihre Bühnen digitalisieren und das Telefon endlich stumm schalten.</p>
+            <a href="index.html#kontakt" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2.5rem;">Kostenloses Erstgespräch vereinbaren &rarr;</a>
+
+            <div class="cta-profiles-grid fade-up" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin-top: 4rem;">
+                <a href="neueinsteiger.html" class="cta-profile-card">
+                    <h4>Der Neueinsteiger</h4>
+                    <p>Starten Sie ab Tag 1 als lokaler Leitbetrieb durch.</p>
+                </a>
+                <a href="mischbetrieb.html" class="cta-profile-card">
+                    <h4>Werkstatt & Handel</h4>
+                    <p>Mischbetrieb? Wir entwirren Ihr Geschäftsmodell.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="padding-right: 2rem;">
+                    <img src="logo_transparent.png" alt="Drehmoment Digital" class="footer-logo" style="height: 140px; margin-bottom: 2rem;">
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Wir bringen Ihre Werkstatt auf die regionale Ideallinie. Präzise, messbar, marktführend.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#warum-wir">Agentur-Philosophie</a></li>
+                        <li><a href="index.html#loesung">Unser System</a></li>
+                        <li><a href="index.html#prozess">Der Ablauf</a></li>
+                        <li><a href="index.html#projekte">Projekte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="https://wa.me/491633778849" target="_blank">0163 - 377 88 49</a></li>
+                        <li><a href="mailto:kontakt@drehmoment-digital.de">kontakt@drehmoment-digital.de</a></li>
+                        <li><br>Made along the A40 / NRW.</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; padding-bottom: 2rem; color: #475569; font-size: 0.95rem; font-weight: 500; letter-spacing: 1px;">
+                &copy; 2026 DREHMOMENT DIGITAL. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const faders = document.querySelectorAll('.fade-up');
+            const appearOptions = { threshold: 0.1, rootMargin: "0px 0px -50px 0px" };
+            const appearOnScroll = new IntersectionObserver(function (entries, appearOnScroll) {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.style.opacity = '1';
+                    entry.target.style.animationPlayState = 'running';
+                    appearOnScroll.unobserve(entry.target);
+                });
+            }, appearOptions);
+            faders.forEach(fader => {
+                fader.style.animationPlayState = 'paused';
+                appearOnScroll.observe(fader);
+            });
+
+            const faqItems = document.querySelectorAll('.faq-item');
+            faqItems.forEach(item => {
+                item.addEventListener('click', (e) => {
+                    if (e.target.tagName !== 'SUMMARY') return;
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item && otherItem.hasAttribute('open')) {
+                            otherItem.removeAttribute('open');
+                        }
+                    });
+                });
+            });
+
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if(mobileToggle && navLinks) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    document.body.classList.toggle('nav-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
