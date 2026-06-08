@@ -202,9 +202,13 @@
 /* WARUM WIR LEISTE (ZENTRIERT & KOMPAKT) */
 .warum-leiste-centered {
     background-color: var(--panel-dark);
-    padding: 3.5rem 0;
+    padding: 3rem 0;
     position: relative;
-    z-index: 2;
+    z-index: 10;
+    margin-top: -4rem; /* Ragt in die Hero-Sektion rein */
+    border-top: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 -15px 40px rgba(0,0,0,0.5); /* Tiefe über dem Hero-Bild */
+    border-radius: 16px 16px 0 0; /* Runde Ecken oben */
     border-bottom: 1px solid rgba(255,255,255,0.05);
 }
 
@@ -214,7 +218,7 @@
     font-size: 0.85rem;
     letter-spacing: 2.5px;
     text-transform: uppercase;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     font-weight: 700;
 }
 
@@ -222,23 +226,23 @@
     color: #fff;
     font-size: clamp(2.2rem, 4vw, 3.5rem);
     line-height: 1.15;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
 }
 
 .warum-lead {
     color: #94A3B8;
     font-size: 1.15rem;
     line-height: 1.6;
-    margin-bottom: 2.5rem;
+    margin-bottom: 2rem;
 }
 
 .warum-stats-centered {
     display: flex;
     justify-content: center;
-    gap: 4rem;
+    gap: 5rem;
     flex-wrap: wrap;
     border-top: 1px solid rgba(255,255,255,0.1);
-    padding-top: 2.5rem;
+    padding-top: 2rem;
 }
 
 .stat-item-centered {
