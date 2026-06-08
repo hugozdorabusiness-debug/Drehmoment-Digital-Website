@@ -373,6 +373,39 @@
     justify-content: space-between;
     gap: 2rem;
     transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    z-index: 1; /* For overlay stacking */
+}
+
+.bento-bg-image {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+.bento-glass-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.bento-glass-dark {
+    background: rgba(15, 23, 42, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+.bento-glass-light {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+}
+
+.bento-glass-orange {
+    background: rgba(232, 84, 10, 0.85);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .system-card:hover {
@@ -410,7 +443,7 @@
 .system-card.bento-hero {
     grid-column: span 2;
     grid-row: span 2;
-    background: var(--panel-dark); 
+    background: transparent; 
     color: #fff;
     border: none;
     justify-content: flex-end; /* Content am Boden */
@@ -423,19 +456,25 @@
 .system-card.bento-square-1, .system-card.bento-square-2 {
     grid-column: span 1;
     grid-row: span 1;
+    background: transparent;
 }
 
 /* Bento Card 4: Sicherheit (Wide, subtle orange tint) */
 .system-card.bento-wide-1 {
     grid-column: span 2;
     grid-row: span 1;
-    background: rgba(232, 84, 10, 0.03);
-    border: 1px solid rgba(232, 84, 10, 0.15);
+    background: transparent;
+    border: none;
+    color: #fff;
 }
+.system-card.bento-wide-1 h3, .system-card.bento-wide-1 p { color: #fff; }
+.system-card.bento-wide-1 .card-badge { background: rgba(255, 255, 255, 0.2); color: #fff; }
 
 /* Bento Card 5 & 6: Bottom Row */
-.system-card.bento-square-3 { grid-column: span 2; grid-row: span 1; }
-.system-card.bento-wide-2 { grid-column: span 2; grid-row: span 1; }
+.system-card.bento-square-3 { grid-column: span 2; grid-row: span 1; background: transparent; }
+.system-card.bento-wide-2 { grid-column: span 2; grid-row: span 1; background: transparent; }
+
+
 
 
 /* TIMELINE ACCORDION */
