@@ -372,7 +372,7 @@
     flex-direction: column;
     justify-content: space-between;
     gap: 2rem;
-    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1; /* For overlay stacking */
 }
 
@@ -381,6 +381,12 @@
     top: 0; left: 0; width: 100%; height: 100%;
     object-fit: cover;
     z-index: -2;
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Bild zoomt ganz leicht mit beim Hover für noch mehr Tiefe */
+.system-card:hover .bento-bg-image {
+    transform: scale(1.05);
 }
 
 .bento-glass-overlay {
@@ -388,29 +394,42 @@
     top: 0; left: 0; width: 100%; height: 100%;
     z-index: -1;
     pointer-events: none;
+    transition: background 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 .bento-glass-dark {
-    background: rgba(15, 23, 42, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(15, 23, 42, 0.65);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .bento-glass-light {
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.70);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
 .bento-glass-orange {
-    background: rgba(232, 84, 10, 0.85);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    background: rgba(232, 84, 10, 0.55);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
 }
 
+/* Hover-Effekte: Karte wird größer, oranger Glow, Glas wird klarer */
 .system-card:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-md);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: 0 20px 40px -10px rgba(232, 84, 10, 0.35);
+    border-color: rgba(232, 84, 10, 0.3);
+}
+
+.system-card:hover .bento-glass-dark {
+    background: rgba(15, 23, 42, 0.45);
+}
+.system-card:hover .bento-glass-light {
+    background: rgba(255, 255, 255, 0.50);
+}
+.system-card:hover .bento-glass-orange {
+    background: rgba(232, 84, 10, 0.35);
 }
 
 .system-card h3 {
