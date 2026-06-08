@@ -67,7 +67,6 @@
                     <img src="./werkstatt_clean_empty.png" alt="Cleane KFZ Werkstatt" class="subpage-hero-img">
                     <div class="subpage-hero-glass"></div>
                     
-                    <!-- Clean Badge instead of full text -->
                     <div style="position: absolute; bottom: 2rem; left: 2rem; background: rgba(12, 14, 18, 0.6); backdrop-filter: blur(10px); border: 1px solid rgba(255,255,255,0.1); padding: 1rem 1.5rem; border-radius: 12px; z-index: 2; display: flex; align-items: center; gap: 1rem; box-shadow: 0 10px 30px rgba(0,0,0,0.3);">
                         <span style="display: block; width: 12px; height: 12px; background: #10b981; border-radius: 50%; box-shadow: 0 0 12px #10b981;"></span>
                         <span style="color: #fff; font-family: var(--font-mono); font-size: 0.95rem; letter-spacing: 1.5px;">STRUKTUR: AKTIVIERT</span>
@@ -81,51 +80,22 @@
     <section class="section-padding" style="background-color: var(--bg-surface);">
         <div class="container">
             
-            <!-- Teil 1: Die Ausgangslage & Unsere Methode -->
-            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; margin-bottom: 6rem; align-items: center;">
-                <div class="fade-up">
-                    <p class="warum-kicker" style="color: var(--accent-orange); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Wir verstehen Ihren Alltag</p>
-                    <h2 style="font-size: clamp(2rem, 3.5vw, 3rem); line-height: 1.15; margin-bottom: 1.5rem; color: #1e293b; font-weight: 900;">Mehr Freiraum für das, was Sie am besten können.</h2>
-                    <p style="font-size: 1.15rem; color: #64748b; line-height: 1.6; margin-bottom: 1.5rem;">
-                        Die Auftragsbücher sind voll, denn immer mehr Menschen investieren in den Erhalt ihrer Fahrzeuge. Das ist eine fantastische Ausgangslage! Die Kunst besteht jetzt darin, aus dieser Fülle an Anfragen genau die herauszufiltern, die perfekt zu Ihrem Betrieb passen.
-                    </p>
-                    <p style="font-size: 1.15rem; color: #64748b; line-height: 1.6;">
-                        Egal, ob Sie lieber viele schnelle Service-Aufträge abwickeln oder sich auf zeitintensive, lukrative Großreparaturen spezialisieren wollen – wir bauen das System, das genau diese Struktur für Sie schafft.
-                    </p>
-                </div>
-
-                <!-- Die 3 Säulen Box -->
-                <div class="fade-up" style="background: #fff; border-radius: 16px; padding: 3rem; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05);">
-                    <h3 style="color: #334155; font-size: 1.5rem; margin-bottom: 2rem; font-weight: 800;">Die 3 Säulen der digitalen Werkstatt</h3>
-                    <ul style="list-style: none; padding: 0; color: #475569; line-height: 1.6;">
-                        <li style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.2rem;">
-                            <div style="background: rgba(232,84,10,0.1); color: var(--accent-orange); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">⚡</div> 
-                            <div>
-                                <strong style="display: block; color: #1e293b; font-size: 1.15rem; margin-bottom: 0.3rem;">Sichtbarkeit als Leitbetrieb</strong>
-                                Treten Sie online exakt so professionell auf, wie Sie in der Werkstatt arbeiten. Das weckt Vertrauen.
-                            </div>
-                        </li>
-                        <li style="margin-bottom: 2rem; display: flex; align-items: flex-start; gap: 1.2rem;">
-                            <div style="background: rgba(232,84,10,0.1); color: var(--accent-orange); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">⚡</div> 
-                            <div>
-                                <strong style="display: block; color: #1e293b; font-size: 1.15rem; margin-bottom: 0.3rem;">Automatischer Kunden-Filter</strong>
-                                Filtern Sie Preisdrücker gezielt heraus und ziehen Sie exakt die Aufträge an, auf die Sie spezialisiert sind.
-                            </div>
-                        </li>
-                        <li style="display: flex; align-items: flex-start; gap: 1.2rem;">
-                            <div style="background: rgba(232,84,10,0.1); color: var(--accent-orange); width: 45px; height: 45px; border-radius: 8px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-size: 1.2rem;">⚡</div> 
-                            <div>
-                                <strong style="display: block; color: #1e293b; font-size: 1.15rem; margin-bottom: 0.3rem;">Gezielte Entlastung</strong>
-                                Einfache Standard-Infos laufen digital ab, damit Sie sich wieder auf das Wesentliche konzentrieren können.
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Teil 1: Die Ausgangslage (ZENTRIERT & BEREINIGT) -->
+            <div class="fade-up" style="text-align: center; max-width: 900px; margin: 0 auto 8rem auto;">
+                <p class="warum-kicker" style="color: var(--accent-orange); text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 1rem;">Wir verstehen Ihren Alltag</p>
+                <h2 style="font-size: clamp(2.5rem, 4vw, 3.8rem); line-height: 1.15; margin-bottom: 2rem; color: #1e293b; font-weight: 900;">
+                    Mehr Freiraum für das, <br>was Sie <span style="color: var(--accent-orange);">am besten können.</span>
+                </h2>
+                <p style="font-size: 1.25rem; color: #64748b; line-height: 1.7; margin-bottom: 1.5rem;">
+                    Die Auftragsbücher sind voll, denn immer mehr Menschen investieren in den Erhalt ihrer Fahrzeuge. Das ist eine fantastische Ausgangslage! Die Kunst besteht jetzt darin, aus dieser Fülle an Anfragen genau die herauszufiltern, die perfekt zu Ihrem Betrieb passen.
+                </p>
+                <p style="font-size: 1.25rem; color: #64748b; line-height: 1.7;">
+                    Egal, ob Sie lieber viele schnelle Service-Aufträge abwickeln oder sich auf zeitintensive, lukrative Großreparaturen spezialisieren wollen – wir bauen das System, das <strong style="color: #1e293b;">genau diese Struktur</strong> für Sie schafft.
+                </p>
             </div>
 
-            <!-- NEU: Persönlichkeit & Vertrauen Block -->
+            <!-- Teil 2: Persönlichkeit & Vertrauen Block -->
             <div class="fade-up" style="background: #1e293b; border-radius: 16px; padding: 4rem; margin-bottom: 8rem; display: flex; gap: 4rem; align-items: center; color: #fff; position: relative; overflow: hidden; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
-                <!-- Subtle Background Glow -->
                 <div style="position: absolute; top: -30%; right: -10%; width: 50%; height: 150%; background: radial-gradient(circle, rgba(232,84,10,0.08) 0%, transparent 60%); pointer-events: none;"></div>
                 
                 <div style="flex: 1.2; position: relative; z-index: 2;">
@@ -145,7 +115,7 @@
                 </div>
             </div>
 
-            <!-- Teil 2: Die Gegenüberstellung -->
+            <!-- Teil 3: Die Gegenüberstellung -->
             <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem auto;">
                 <h2 class="fade-up" style="font-size: clamp(2.2rem, 4vw, 3.2rem); line-height: 1.15; margin-bottom: 1.5rem; color: #1e293b; font-weight: 900;">Der Vorher-Nachher-Vergleich.</h2>
                 <p class="fade-up" style="font-size: 1.2rem; color: #64748b; line-height: 1.6;">
@@ -177,7 +147,7 @@
                 </div>
             </div>
             
-            <!-- Teil 3: Abschließendes Trust-Element -->
+            <!-- Teil 4: Abschließendes Trust-Element -->
             <div class="fade-up" style="background: #1e293b; border-radius: 20px; padding: 5rem 3rem; text-align: center; color: #fff; position: relative; overflow: hidden;">
                 <div style="position: absolute; top: -50%; left: -10%; width: 50%; height: 150%; background: radial-gradient(circle, rgba(232,84,10,0.1) 0%, transparent 70%);"></div>
                 

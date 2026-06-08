@@ -19,7 +19,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-width: 1300px;
+    max-width: 1600px; /* Massive Verbreiterung für mehr Entspannung im Header */
     margin: 0 auto;
     padding: 0.8rem 2rem;
 }
