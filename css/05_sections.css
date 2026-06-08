@@ -11,8 +11,9 @@
     left: 0;
     width: 100%;
     z-index: 1001;
-    background-color: rgba(28, 31, 38, 0.90); /* Dark Frosted Glass passend zum Footer */
-    backdrop-filter: blur(20px);
+    background-color: rgba(12, 14, 18, 0.85); /* Dunkleres Anthrazit für besseren Kontrast */
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -804,7 +805,7 @@
 
 /* FOOTER NEU */
 .site-footer {
-    background: var(--panel-dark);
+    background: #0c0e12; /* Dunkleres Anthrazit, kein reines Schwarz */
     padding: 6rem 0 0 0;
     border-top: 1px solid rgba(255, 255, 255, 0.03);
     color: #94A3B8;
