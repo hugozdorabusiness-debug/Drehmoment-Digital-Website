@@ -330,6 +330,17 @@
     border: 4px solid #fff;
 }
 
+.kontrolle-image-wrapper::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: rgba(30, 41, 59, 0.45); /* Anthrazit-Glas */
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    pointer-events: none;
+    z-index: 2;
+}
+
 .kontrolle-img {
     width: 100%;
     height: 100%;
