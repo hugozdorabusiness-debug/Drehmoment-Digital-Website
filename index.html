@@ -471,14 +471,14 @@
     </section>
 
     <!-- ================== KONTAKT ================== -->
-    <section class="section-padding section-dark" id="kontakt">
+    <section class="section-padding" id="kontakt" style="background-color: var(--panel-dark); color: #fff; padding: 6rem 0;">
         <div class="container fade-up">
             <div class="contact-grid">
 
                 <div class="contact-info">
                     <div style="margin-bottom: 3rem;">
                         <img src="logo_transparent.png" alt="Drehmoment Digital" class="footer-logo"
-                            style="height: 90px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;">
+                            style="height: 140px; width: auto; filter: brightness(0) invert(1); opacity: 0.9;">
                     </div>
                     <h2 style="color: #fff; margin-bottom: 3rem; font-size: 3.5rem; line-height: 1.1;">Starten wir <span
                             class="highlight-text">durch</span>.</h2>
@@ -501,29 +501,37 @@
                         <a href="mailto:kontakt@drehmoment-digital.de"
                             style="font-size: 1.4rem;">kontakt@drehmoment-digital.de</a>
                     </div>
+
+                    <div class="contact-method" style="margin-top: 2.5rem;">
+                        <h4>Standort / Adresse</h4>
+                        <p style="font-size: 1.2rem; color: #cbd5e1; font-family: var(--font-heading);">Max-Planck-Straße 42<br>44145 Dortmund</p>
+                    </div>
                 </div>
 
                 <div class="contact-form">
                     <h3 style="font-size: 2.2rem; font-weight: 900; margin-bottom: 1rem;">Demo anfordern</h3>
-                    <p style="color: var(--text-muted); margin-bottom: 2.5rem;">Hinterlassen Sie hier Ihre Daten. Wir
-                        melden uns umgehend bei Ihnen.</p>
+                    <p style="color: var(--text-muted); margin-bottom: 2.5rem;">Hinterlassen Sie hier Ihre Daten. Wir melden uns umgehend bei Ihnen.</p>
 
-                    <form id="contact-form"
-                        onsubmit="event.preventDefault(); alert('Verbindung zum Cloudflare Worker folgt...');">
+                    <form id="contact-form" onsubmit="event.preventDefault(); alert('Verbindung zum Cloudflare Worker folgt...');">
                         <div class="form-group">
-                            <label for="name">Name / Betrieb</label>
-                            <input type="text" id="name" name="name" class="form-control"
-                                placeholder="Firmenname oder Vorname Nachname" required>
+                            <label for="name">Name / Betrieb *</label>
+                            <input type="text" id="name" name="name" class="form-control" placeholder="Firmenname oder Vorname Nachname" required>
                         </div>
                         <div class="form-group">
-                            <label for="phone">Telefon-Nr. (für Rückruf)</label>
-                            <input type="tel" id="phone" name="phone" class="form-control"
-                                placeholder="0172 / 123 456 78" required>
+                            <label for="phone">Telefon-Nr. (für Rückruf) *</label>
+                            <input type="tel" id="phone" name="phone" class="form-control" placeholder="0172 / 123 456 78" required>
                         </div>
                         <div class="form-group">
-                            <label for="message">Wie können wir helfen?</label>
-                            <textarea id="message" name="message" class="form-control" style="height: 120px;"
-                                placeholder="Kurze Nachricht an uns..."></textarea>
+                            <label for="email">E-Mail-Adresse <span style="color: #94a3b8; font-weight: 400; font-size: 0.8em;">(optional)</span></label>
+                            <input type="email" id="email" name="email" class="form-control" placeholder="ihre@email.de">
+                        </div>
+                        <div class="form-group">
+                            <label for="website">Adresse des Betriebes oder Website <span style="color: #94a3b8; font-weight: 400; font-size: 0.8em;">(optional)</span></label>
+                            <input type="text" id="website" name="website" class="form-control" placeholder="Straße, PLZ, Ort oder www.ihre-website.de">
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Ihre aktuelle Situation (Kurzbeschreibung) *</label>
+                            <textarea id="message" name="message" class="form-control" style="height: 120px;" placeholder="Wo stehen Sie aktuell und wo wollen Sie hin?" required></textarea>
                         </div>
                         <button type="submit" class="btn-primary" style="width: 100%; border:none; cursor: pointer;">
                             ANFRAGE ABSENDEN
