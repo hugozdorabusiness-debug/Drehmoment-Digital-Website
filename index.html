@@ -250,7 +250,7 @@
         id="prozess">
         <div class="container">
             <p class="warum-kicker fade-up" style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Der Prozess</p>
-            <h2 class="fade-up" style="text-align: center; margin-bottom: 1.5rem; color: #334155; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Ein klarer, zielgerichteter Prozess</h2>
+            <h2 class="fade-up" style="text-align: center; margin-bottom: 1.5rem; color: #1e293b; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Ein klarer, <span class="highlight-text">zielgerichteter</span> Prozess</h2>
             <p class="fade-up lead"
                 style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 4rem auto;">Unser
                 Vorgehen ist exakt strukturiert und verlangt Ihnen kaum Zeit ab. Fokussieren Sie sich komplett auf Ihr
@@ -506,6 +506,17 @@
             faders.forEach(fader => {
                 fader.style.animationPlayState = 'paused';
                 appearOnScroll.observe(fader);
+            });
+
+            // --- TIMELINE HOVER LOGIC ---
+            const timelineDetails = document.querySelectorAll('.timeline-content-acc');
+            timelineDetails.forEach(detail => {
+                detail.addEventListener('mouseenter', () => {
+                    detail.setAttribute('open', '');
+                });
+                detail.addEventListener('mouseleave', () => {
+                    detail.removeAttribute('open');
+                });
             });
 
             // --- SCROLL SPY FÜR NAVIGATION GLOW ---

@@ -487,12 +487,14 @@
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
     position: relative;
-    transition: all 0.3s ease;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+.timeline-content-acc:hover,
 .timeline-content-acc[open] {
-    box-shadow: 0 10px 30px rgba(232, 84, 10, 0.08);
-    border-color: rgba(232, 84, 10, 0.2);
+    box-shadow: 0 15px 40px rgba(232, 84, 10, 0.15);
+    border-color: rgba(232, 84, 10, 0.4);
+    transform: translateY(-5px);
 }
 
 .timeline-step.step-left .timeline-content-acc::after {
