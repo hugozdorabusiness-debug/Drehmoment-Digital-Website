@@ -24,7 +24,11 @@
     <meta property="og:image" content="https://drehmoment-digital.de/logo_transparent.png">
 
     <link rel="icon" type="image/png" href="logo_transparent.png">
-    <link rel="stylesheet" href="styles.css?v=fresh">
+    <link rel="stylesheet" href="css/01_variables.css">
+    <link rel="stylesheet" href="css/02_typography.css">
+    <link rel="stylesheet" href="css/03_layout.css">
+    <link rel="stylesheet" href="css/04_components.css">
+    <link rel="stylesheet" href="css/05_sections.css">
 </head>
 
 <body>
@@ -32,10 +36,9 @@
     <!-- ================== HEADER ================== -->
     <header class="site-header container">
         <div class="header-inner">
-            <div class="logo-container" style="margin-top: -15px;">
+            <div class="logo-container">
                 <a href="#">
-                    <img src="logo_transparent.png" alt="Drehmoment Digital Logo"
-                        style="height: 85px; width: auto; transition: transform 0.3s ease; display: block; filter: none; mix-blend-mode: normal;">
+                    <img src="logo_transparent.png" alt="Drehmoment Digital Logo" class="header-logo-img">
                 </a>
             </div>
             <nav class="nav-links">
@@ -64,20 +67,16 @@
         <div class="hero-grid">
 
             <div class="hero-text fade-up delay-1">
-                <p
-                    style="font-family: var(--font-mono); font-size: 0.85rem; color: var(--accent-orange); letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">
-                    Ihre Premium Web-Agentur</p>
+                <p class="hero-subtitle">Ihre Premium Web-Agentur</p>
                 <h1>Wir bringen Ihre Werkstatt auf die <span class="highlight-text">digitale Ideallinie</span>.</h1>
-                <p class="lead"
-                    style="font-size: 1.25rem; color: var(--text-muted); margin-bottom: 2rem; line-height: 1.7;">
+                <p class="lead hero-lead">
                     Einfache Websites kann jeder. Wir entwickeln digitale Hochleistungssysteme, die für spürbaren
                     Auftrieb in Ihrem Kundenstamm sorgen – lokal verwurzelt, aber mit der Power einer Weltagentur.</p>
-                <div class="hero-cta-group" style="display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center;">
-                    <a href="#kontakt" class="btn-primary" style="font-size: 1.1rem; padding: 1.1rem 2.2rem;">Jetzt
+                <div class="hero-cta-group">
+                    <a href="#kontakt" class="btn-primary btn-large">Jetzt
                         kostenlose Demo anfordern &rarr;</a>
-                    <span style="color: #94A3B8; font-weight: 500;">oder direkt:</span>
-                    <a href="https://wa.me/491633778849" target="_blank"
-                        style="display: flex; align-items: center; gap: 8px; color: var(--text-main); font-weight: 800; text-decoration: none; font-size: 1.3rem; transition: color 0.2s;">
+                    <span class="hero-or-text">oder direkt:</span>
+                    <a href="https://wa.me/491633778849" target="_blank" class="direct-contact-link">
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="#25d366"
                             xmlns="http://www.w3.org/2000/svg">
                             <path
@@ -88,12 +87,9 @@
                 </div>
             </div>
 
-            <div class="hero-visual fade-up delay-2"
-                style="position: relative; border: 1px solid var(--panel-border); background: #fff; box-shadow: 20px 20px 0px rgba(0,0,0,0.05);">
-                <img src="kfz-baumkrone-screenshot.png" alt="Echtes Projekt: KFZ Baumkrone"
-                    style="width: 100%; height: auto; display: block;">
-                <div
-                    style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(17,17,17,0.9); color: #fff; padding: 10px 15px; font-family: var(--font-mono); font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px;">
+            <div class="hero-visual fade-up delay-2">
+                <img src="kfz-baumkrone-screenshot.png" alt="Echtes Projekt: KFZ Baumkrone">
+                <div class="hero-visual-caption">
                     Aktuelles Projekt: kfz-baumkrone.de
                 </div>
             </div>

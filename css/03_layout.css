@@ -1,0 +1,63 @@
+/* 
+  🚀 DREHMOMENT DIGITAL — BUCKET 03: LAYOUT
+  Das Skelett: Resets, Container, globale Abstände und der Header-Fix.
+*/
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Der magische Fix gegen das Verdecken durch den Sticky-Header (Paasen-Standard) */
+    scroll-padding-top: var(--header-height);
+}
+
+body {
+    background-color: var(--bg-primary);
+}
+
+/* Grain Overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3Cfilter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='1'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    pointer-events: none;
+    z-index: 9998;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.section-padding {
+    padding: 10rem 0;
+}
+
+.section-dark {
+    background: var(--panel-dark);
+    color: #fff;
+    border-radius: var(--radius-lg);
+    margin: 0 1rem;
+}
+
+/* Bild-Wrapper für responsive Bilder ohne Verzerrung */
+.image-wrapper {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
