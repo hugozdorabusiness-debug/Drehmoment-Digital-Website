@@ -1,0 +1,63 @@
+
+
+
+Thought for 3s
+
+
+Searched
+0151
+2 results
+Analyzed
+
+index.html#L265-285
+
+Thought for 2s
+
+
+Analyzed
+
+index.html#L285-320
+
+Thought for 1s
+
+
+Analyzed
+
+index.html#L350-380
+
+Thought for 4s
+
+
+
+
+Edited
+
+index.html
++1
+-1
+
+Thought for 3s
+
+
+
+
+🔍 Was passiert gerade: Alles klar, die Kontaktdaten (Telefon und Mail) sind im HTML eingebaut. Wenn jetzt jemand auf dem Handy auf die Nummer drückt, öffnet sich sofort die Wähltastatur (<a href="tel:...">). Den Schreibfehler kontak habe ich ignoriert und das korrekte kontakt@drehmoment-digital.de hinterlegt, das schon den Rest der Seite ziert.
+
+Jetzt kommt der wichtigste technische Schritt für deine Seite (Phase 5 des B.L.A.S.T. Frameworks: Die Verkabelung des Formulars). Ein HTML-Formular ist nur ein dummer Briefkasten ohne Boden. Wenn jemand auf "Senden" drückt, fallen die Daten einfach ins Nichts, solange kein Postbote da ist, der sie abholt.
+
+Wir brauchen diesen Postboten. Da du die Seite nicht auf einem klassischen Server (wie WordPress/PHP) betreiben willst, sondern ultraschnell und sicher auf Cloudflare Pages, haben wir keinen eingebauten Hintergrund-Prozess, der E-Mails verschicken kann.
+
+Die Analogie: Wir haben ein wunderschönes Auto gebaut (HTML/CSS), aber es gibt noch keinen Keilriemen, der das Gaspedal (Formular-Button) mit dem Motor (ZOHO-Postfach) verbindet.
+
+Der Keilriemen, den wir jetzt einbauen werden, heißt Cloudflare Worker. Das ist ein winziges, serverloses Skript, das nur dann aufwacht, wenn jemand auf den Button klickt. Es schnappt sich die Daten (Name, Telefon, Nachricht) und schießt sie sicher über eine Schnittstelle direkt in dein Postfach kontakt@drehmoment-digital.de.
+
+Bist du bereit, dieses kleine Skript (den Worker) anzulegen und das Formular scharf zu schalten?
+
+📚 Lernprotokoll
+🔧 Was wurde gemacht: Die reinen Text-Kontaktdaten (Telefon und Mail) wurden mithilfe der Such-und-Ersetzen-Funktion ins HTML eingetragen, inklusive der passenden "tel:" und "mailto:" Links für mobile Nutzer.
+
+🔗 Wie hängt das zusammen: Ein Formular auf einer Webseite (Frontend) besteht immer aus "Tags" wie <input> oder <button>. Diese sammeln nur die Eingaben des Nutzers („State“). Damit diese Daten zu dir kommen, braucht es ein sogenanntes Backend (einen Server). Da moderne Web-Agentur-Seiten auf Cloudflare ("Serverless") laufen, bauen wir kein riesiges Backend, sondern nutzen sogenannte "Worker" (kleine Skripte), die Daten entgegennehmen und via API an deinen E-Mail-Provider weiterleiten.
+
+💡 Key Insight: "Static Sites" (wie unsere index.html) sind rasend schnell und zu 99% unhackbar, da es keine Datenbank im Hintergrund gibt. Der Preis dafür ist: Alle interaktiven Funktionen (wie ein Kontaktformular) müssen bewusst über kleine externe Micro-Services ("Worker") angebunden werden.
+
+❓ Denkanstoß: Unser zukünftiges Cloudflare-Skript benötigt ein Postfach, von dem aus es die Formulardaten an dich senden "darf" (also einen sogenannten SMTP-Zugang), da dein Postfach bei ZOHO sonst denkt, es handele sich um bösartigen Spam. Hast du für ZOHO schon die SMTP-Logindaten parat (oder hast du die Option, über Cloudflare eine Weiterleitung einzurichten)?
