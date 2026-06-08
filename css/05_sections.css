@@ -843,8 +843,142 @@
     color: var(--accent-orange);
 }
 
-/* Removed .footer-bottom styles */
+/* ==========================================================================
+   SUBPAGE STYLES (Header, Hero, FAQ, CTA)
+   ========================================================================== */
 
+/* Subpage Header (Tunnel) */
+.subpage-header {
+    background-color: #0c0e12;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+.back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #94A3B8;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: color 0.2s, transform 0.2s;
+    background: rgba(255,255,255,0.03);
+    padding: 0.5rem 1rem;
+    border-radius: 8px;
+}
+.back-btn:hover {
+    color: var(--accent-orange);
+    transform: translateX(-3px);
+    background: rgba(255,255,255,0.06);
+}
+.back-btn svg {
+    width: 16px;
+    height: 16px;
+}
+
+/* Subpage Typography Hero */
+.subpage-hero {
+    padding-top: 12rem;
+    padding-bottom: 6rem;
+    background-color: var(--panel-dark);
+    text-align: center;
+}
+.subpage-kicker {
+    color: var(--accent-orange);
+    font-family: var(--font-mono);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+.subpage-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: #fff;
+    font-weight: 900;
+    line-height: 1.1;
+    max-width: 900px;
+    margin: 0 auto 1.5rem auto;
+    letter-spacing: -0.02em;
+}
+.subpage-hero p.lead {
+    font-size: 1.25rem;
+    color: #94A3B8;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* FAQ Accordion Modul */
+.faq-section {
+    padding: 6rem 0;
+    background-color: var(--bg-surface);
+}
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.faq-item {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.05);
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+    transition: all 0.3s ease;
+}
+.faq-item:hover, .faq-item[open] {
+    box-shadow: 0 10px 30px rgba(232, 84, 10, 0.08);
+    border-color: rgba(232, 84, 10, 0.3);
+}
+.faq-summary {
+    padding: 1.5rem 2rem;
+    cursor: pointer;
+    list-style: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #1e293b;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.faq-summary::-webkit-details-marker { display: none; }
+.faq-icon {
+    color: var(--accent-orange);
+    transition: transform 0.3s ease;
+}
+.faq-item[open] .faq-icon {
+    transform: rotate(180deg);
+}
+.faq-content {
+    padding: 0 2rem 1.5rem 2rem;
+    color: #64748b;
+    line-height: 1.6;
+    font-size: 1.05rem;
+    animation: acc-slide-down 0.3s ease-out;
+}
+
+/* Target CTA */
+.subpage-cta {
+    background-color: var(--panel-dark);
+    padding: 8rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+.subpage-cta-inner {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.subpage-cta h2 {
+    color: #fff;
+    font-size: clamp(2rem, 4vw, 3.2rem);
+    margin-bottom: 1.5rem;
+    line-height: 1.2;
+}
+.subpage-cta p {
+    color: #94A3B8;
+    font-size: 1.2rem;
+    margin-bottom: 3rem;
+    line-height: 1.6;
+}
 
 /* ==========================================================================
    DESKTOP-FIRST MEDIA QUERIES (Wird im nächsten Schritt auf Mobile-First umgebaut)
