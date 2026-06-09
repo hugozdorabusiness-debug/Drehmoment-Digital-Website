@@ -106,7 +106,7 @@
             <!-- WAVY SVG LINE -->
             <div class="journey-wave-container">
                 <svg class="journey-wave" preserveAspectRatio="none" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M 0,50 Q 166,-10 500,50 T 990,50" fill="none" stroke="var(--accent-orange)" stroke-width="3" stroke-dasharray="10,10" vector-effect="non-scaling-stroke" />
+                    <path d="M 0,50 Q 166,110 500,50 T 990,50" fill="none" stroke="var(--accent-orange)" stroke-width="3" stroke-dasharray="10,10" vector-effect="non-scaling-stroke" />
                     <polygon points="985,40 1000,50 985,60" fill="var(--accent-orange)" />
                 </svg>
             </div>
@@ -114,12 +114,12 @@
             <div class="timeline-hz-line"></div>
                 
             <!-- Nodes -->
-            <div class="timeline-hz-node timeline-hz-node-1">01</div>
-            <div class="timeline-hz-node timeline-hz-node-2">02</div>
+            <div class="timeline-hz-node timeline-hz-node-3">01</div>
+            <div class="timeline-hz-node timeline-hz-node-1">02</div>
             <div class="timeline-hz-node timeline-hz-node-3">03</div>
 
             <!-- Step 1 -->
-            <details class="timeline-hz-content timeline-hz-content-1">
+            <details class="timeline-hz-content timeline-hz-content-3">
                 <summary class="timeline-summary">
                     <h3>Sicherung & Profil-Übergang</h3>
                     <p>Wir schauen gemeinsam auf die Übergangsphase, die für dich eh schon mit viel Arbeit und Stress verbunden ist.</p>
@@ -135,7 +135,7 @@
             </details>
             
             <!-- Step 2 -->
-            <details class="timeline-hz-content timeline-hz-content-2">
+            <details class="timeline-hz-content timeline-hz-content-1">
                 <summary class="timeline-summary">
                     <h3>Digitale Entstaubung</h3>
                     <p>Schritt für Schritt wieder sauber aufsetzen. Ein modernes Erscheinungsbild, das Vertrauen schafft.</p>
@@ -169,14 +169,15 @@
     </section>
 
     <!-- MODULE 1: Generationswechsel -->
-    <section class="section-padding" style="background-color: var(--bg-primary); position: relative; overflow: hidden;">
-        <div class="container fade-up">
-            <div style="background: rgba(12, 14, 18, 0.8); backdrop-filter: blur(20px); border: 1px solid rgba(255,255,255,0.05); padding: 4rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center; position: relative; overflow: hidden;">
+    <section class="section-padding" style="background-color: var(--bg-surface); position: relative; overflow: hidden;">
+        <div class="container-wide fade-up">
+            <div style="background: var(--panel-dark); padding: 4rem; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.3); display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center; position: relative; overflow: hidden;">
                 <!-- Decorative Element -->
                 <div style="position: absolute; top: -10rem; left: -10rem; width: 300px; height: 300px; background: var(--accent-orange); border-radius: 50%; opacity: 0.15; filter: blur(60px); z-index: 0;"></div>
                 
                 <div style="position: relative; z-index: 1;">
                     <img src="assets/uebernahme_generation.png" alt="Generationswechsel in der Werkstatt" style="width: 100%; border-radius: 16px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                    <div style="position: absolute; inset: 0; background: rgba(12, 14, 18, 0.5); border-radius: 16px;"></div>
                 </div>
                 <div style="position: relative; z-index: 1;">
                     <p class="warum-kicker" style="color: var(--accent-orange);">Interne & externe Nachfolge</p>
@@ -186,23 +187,42 @@
                     <p style="font-size: 1.15rem; color: #94a3b8; line-height: 1.7; margin-bottom: 1.5rem;">
                         Es muss nicht immer ein externer Käufer sein – oft übernimmt auch der eigene Sohn oder die Tochter. Doch egal, wer den Betrieb fortführt: Es ist der perfekte Zeitpunkt, um die Werkstatt digital neu aufzustellen, ohne die wertvollen Wurzeln zu kappen.
                     </p>
-                    <ul class="comp-list good-list" style="margin-top: 0; color: #cbd5e1;">
-                        <li><strong>Tradition bewahren:</strong> Die Geschichte und Werte des Vorgängers ehrenvoll integrieren.</li>
-                        <li><strong>Autorität aufbauen:</strong> Dem neuen Chef helfen, bei den alten Stammkunden Vertrauen zu schaffen.</li>
-                        <li><strong>Digitalisierungsschub:</strong> Alte Strukturen (wie Papierkalender) sanft ablösen.</li>
-                    </ul>
+                    <div style="display: grid; grid-template-columns: 1fr; gap: 1rem; margin-top: 2rem;">
+                        <div style="background: rgba(255,255,255,0.03); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1rem; align-items: center;">
+                            <svg width="24" height="24" fill="none" stroke="var(--accent-orange)" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                            <div>
+                                <strong style="color: #fff; display: block; margin-bottom: 0.1rem;">Tradition bewahren</strong>
+                                <span style="color: #94a3b8; font-size: 0.9rem;">Die Geschichte und Werte des Vorgängers ehrenvoll integrieren.</span>
+                            </div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1rem; align-items: center;">
+                            <svg width="24" height="24" fill="none" stroke="var(--accent-orange)" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path></svg>
+                            <div>
+                                <strong style="color: #fff; display: block; margin-bottom: 0.1rem;">Autorität aufbauen</strong>
+                                <span style="color: #94a3b8; font-size: 0.9rem;">Dem neuen Chef helfen, Vertrauen zu schaffen.</span>
+                            </div>
+                        </div>
+                        <div style="background: rgba(255,255,255,0.03); padding: 1.2rem; border-radius: 12px; border: 1px solid rgba(255,255,255,0.05); display: flex; gap: 1rem; align-items: center;">
+                            <svg width="24" height="24" fill="none" stroke="var(--accent-orange)" viewBox="0 0 24 24" style="flex-shrink: 0;"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+                            <div>
+                                <strong style="color: #fff; display: block; margin-bottom: 0.1rem;">Digitalisierungsschub</strong>
+                                <span style="color: #94a3b8; font-size: 0.9rem;">Alte Strukturen (Papierkalender) sanft ablösen.</span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- MODULE 2: Gemeinsame Prozessanalyse -->
-    <section class="section-padding" style="background-color: #fff;">
+    <section class="section-padding" style="background-color: var(--bg-surface);">
         <div class="container fade-up">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
                 <div style="order: 2;">
-                    <div style="position: relative; padding: 1rem; background: var(--bg-surface); border-radius: 20px;">
+                    <div style="position: relative; padding: 1rem; background: #fff; border-radius: 20px;">
                         <img src="assets/uebernahme_prozess.png" alt="Gemeinsame Prozessanalyse am Tablet" style="width: 100%; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                        <div style="position: absolute; inset: 1rem; background: rgba(12, 14, 18, 0.4); border-radius: 12px;"></div>
                     </div>
                 </div>
                 <div style="order: 1;">
