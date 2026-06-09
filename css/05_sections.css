@@ -829,12 +829,12 @@
     display: flex; align-items: center; justify-content: center;
     font-size: 2.5rem; font-weight: 900; font-family: var(--font-mono);
     z-index: 2;
-    box-shadow: 0 6px 20px rgba(232, 84, 10, 0.3);
+    box-shadow: 0 0 30px rgba(232, 84, 10, 0.6); /* Verstärkter oranger Glow */
 }
 
 .timeline-content-acc {
     width: 45%;
-    background: #fff;
+    background: #faf8f5; /* Wärmeres Off-Weiß statt blendenem grellem Weiß */
     border: 1px solid rgba(0,0,0,0.05);
     border-radius: 16px;
     box-shadow: 0 4px 20px rgba(0,0,0,0.03);
@@ -855,7 +855,7 @@
     right: -10px; top: 40px;
     border-width: 10px 0 10px 10px;
     border-style: solid;
-    border-color: transparent transparent transparent #fff;
+    border-color: transparent transparent transparent #faf8f5;
     filter: drop-shadow(2px 0 2px rgba(0,0,0,0.02));
 }
 
@@ -865,7 +865,7 @@
     left: -10px; top: 40px;
     border-width: 10px 10px 10px 0;
     border-style: solid;
-    border-color: transparent #fff transparent transparent;
+    border-color: transparent #faf8f5 transparent transparent;
     filter: drop-shadow(-2px 0 2px rgba(0,0,0,0.02));
 }
 
