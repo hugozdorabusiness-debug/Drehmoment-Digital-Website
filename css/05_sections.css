@@ -1655,7 +1655,8 @@
     }
     
     /* Mobile für neue Subpage Elemente & Bugfixes */
-    .subpage-hero-grid {
+    .subpage-hero-grid,
+    .subpage-hero-grid.hero-reverse {
         grid-template-columns: 1fr;
         gap: 2.5rem;
     }
