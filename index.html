@@ -716,7 +716,7 @@
             const sections = document.querySelectorAll("section[id]");
             const navLinks = document.querySelectorAll(".nav-links a[href^='index.html#'], .nav-links a[href^='#']");
 
-            window.addEventListener("scroll", () => {
+            const updateScrollSpy = () => {
                 let current = "";
                 sections.forEach((section) => {
                     const sectionTop = section.offsetTop;
@@ -727,6 +727,11 @@
                     }
                 });
 
+                // Fallback to first section if at top
+                if (scrollY < 100 && sections.length > 0) {
+                    current = sections[0].getAttribute("id");
+                }
+
                 navLinks.forEach((link) => {
                     link.classList.remove("active");
                     const href = link.getAttribute("href");
@@ -734,7 +739,10 @@
                         link.classList.add("active");
                     }
                 });
-            });
+            };
+
+            window.addEventListener("scroll", updateScrollSpy);
+            updateScrollSpy(); // Trigger immediately on load
 
             // Contact Form Logic
             const contactForm = document.getElementById('contact-form');
