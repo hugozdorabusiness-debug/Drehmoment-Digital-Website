@@ -1730,7 +1730,7 @@
     .footer-grid {
         grid-template-columns: 1fr;
         gap: 3rem;
-        text-align: center;
+        text-align: left;
     }
     
     .footer-col {
@@ -1738,7 +1738,7 @@
     }
 
     .footer-col ul {
-        display: inline-block;
+        display: block;
         text-align: left;
     }
     
