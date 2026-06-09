@@ -931,10 +931,11 @@
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: auto 60px auto;
     row-gap: 2rem;
-    column-gap: 2rem;
+    column-gap: 3rem; /* Etwas breiterer Abstand */
     position: relative;
-    max-width: 1200px;
+    max-width: 1400px; /* Deutlich breiter */
     margin: 4rem auto;
+    padding: 0 2rem;
     align-items: center;
 }
 
