@@ -195,10 +195,11 @@
     <!-- ================== ZIELGRUPPEN ================== -->
     <section class="section-padding" id="zielgruppen" style="background-color: var(--bg-surface); color: #1e293b;">
         <style>
-            #zielgruppen .target-card-content { color: #475569; }
-            #zielgruppen .target-card-content h3 { color: #1e293b; }
-            #zielgruppen .target-card-content .target-list li { color: #475569; }
-            #zielgruppen .btn-outline { border-color: #cbd5e1 !important; color: #1e293b !important; }
+            #zielgruppen .target-card { background-color: var(--panel-dark); border: 1px solid rgba(0,0,0,0.1); }
+            #zielgruppen .target-card-content { color: #94A3B8; }
+            #zielgruppen .target-card-content h3 { color: #fff; }
+            #zielgruppen .target-card-content .target-list li { color: #cbd5e1; }
+            #zielgruppen .btn-outline { border-color: rgba(255,255,255,0.2) !important; color: #fff !important; }
             #zielgruppen .btn-outline:hover { background-color: var(--accent-orange) !important; color: #fff !important; border-color: var(--accent-orange) !important; }
         </style>
         <div class="container-wide">
@@ -289,14 +290,8 @@
         style="background-color: var(--panel-dark); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);"
         id="prozess">
         <style>
-            #prozess .timeline-node { background: #0c0e12; color: #fff; border-color: var(--accent-orange); }
-            #prozess .timeline-content-acc { background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.1); }
-            #prozess .timeline-summary h3 { color: #fff !important; }
-            #prozess .timeline-summary p { color: #94a3b8 !important; }
-            #prozess .timeline-details li { color: #cbd5e1 !important; }
-            #prozess .timeline-step.step-left .timeline-content-acc::after { border-color: transparent transparent transparent rgba(255,255,255,0.02); }
-            #prozess .timeline-step.step-right .timeline-content-acc::after { border-color: transparent rgba(255,255,255,0.02) transparent transparent; }
-            #prozess .timeline-node[style*="background: #f8fafc;"] { background: rgba(232,84,10,0.1) !important; }
+            #prozess > .container > h2 { color: #fff !important; }
+            #prozess > .container > p.lead { color: #94a3b8 !important; }
         </style>
         <div class="container">
             <p class="warum-kicker fade-up" style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Der Prozess</p>
