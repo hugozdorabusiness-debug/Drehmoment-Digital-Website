@@ -1048,12 +1048,13 @@
 }
 .subpage-hero-grid {
     display: grid;
-    grid-template-columns: 7fr 3fr; /* Echtes 70/30 Layout */
+    grid-template-columns: 3fr 7fr; /* Echtes 30/70 Layout */
     gap: 4rem;
     align-items: center;
 }
 .subpage-hero-text {
     text-align: left;
+    order: 2;
 }
 .subpage-hero-visual {
     position: relative;
@@ -1061,6 +1062,7 @@
     overflow: hidden; /* Für das Bild */
     box-shadow: 0 20px 40px rgba(0,0,0,0.3);
     aspect-ratio: 4/5;
+    order: 1;
 }
 .subpage-hero-img {
     width: 100%;
@@ -1369,6 +1371,18 @@
     }
     
     /* Mobile für neue Subpage Elemente */
+    .subpage-hero-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    .subpage-hero-text {
+        order: 1;
+        text-align: center;
+    }
+    .subpage-hero-visual {
+        order: 2;
+    }
+
     .launchpad-grid { grid-template-columns: 1fr; }
     .pillars-container { flex-direction: column; gap: 2rem; }
     .independence-box { flex-direction: column; padding: 3rem 2rem; }
