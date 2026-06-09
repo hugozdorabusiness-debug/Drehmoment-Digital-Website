@@ -668,28 +668,6 @@
                 });
             });
 
-            // --- SCROLL SPY FÜR NAVIGATION GLOW ---
-            const sections = document.querySelectorAll("section[id]");
-            const navLinks = document.querySelectorAll(".nav-links a");
-            
-            window.addEventListener("scroll", () => {
-                let current = "";
-                sections.forEach(section => {
-                    const sectionTop = section.offsetTop;
-                    // Check if scroll is within section (mit leichtem Offset von 250px für flüssigen Übergang)
-                    if (window.scrollY >= (sectionTop - 250)) {
-                        current = section.getAttribute("id");
-                    }
-                });
-
-                navLinks.forEach(link => {
-                    link.classList.remove("active");
-                    if (link.getAttribute("href") === "#" + current) {
-                        link.classList.add("active");
-                    }
-                });
-            });
-
             // --- MOBILE MENU LOGIC ---
             const toggle = document.querySelector('.mobile-nav-toggle');
             const nav = document.querySelector('.nav-links');
@@ -712,14 +690,12 @@
                 });
             }
 
-            // ScrollSpy Logic
+            // --- ROCK-SOLID SCROLL SPY ---
             const sections = document.querySelectorAll("section[id]");
             const navLinks = document.querySelectorAll(".nav-links a[href*='#']");
 
             function updateScrollSpy() {
                 let scrollPosition = window.scrollY || document.documentElement.scrollTop;
-                
-                // Add a small offset so it triggers slightly before hitting the exact pixel
                 let currentSectionId = "";
 
                 sections.forEach(section => {
@@ -731,7 +707,6 @@
                     }
                 });
 
-                // Fallback for the very top
                 if (scrollPosition < 100 && sections.length > 0) {
                     currentSectionId = sections[0].getAttribute("id");
                 }
@@ -746,7 +721,6 @@
             }
 
             window.addEventListener("scroll", updateScrollSpy, { passive: true });
-            // Initial trigger
             setTimeout(updateScrollSpy, 100);
             updateScrollSpy();
 
