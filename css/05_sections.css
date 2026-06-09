@@ -1510,6 +1510,51 @@
 }
 
 /* ==========================================================================
+   MIETWERKSTATT SUBPAGE CSS (Refactored inline styles)
+   ========================================================================== */
+.feature-grid-6 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1200px;
+    margin: 0 auto 8rem auto;
+    gap: 2rem;
+}
+
+.dashboard-mockup-section {
+    margin-bottom: 8rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* ==========================================================================
+   UEBERNAHME SUBPAGE CSS (Refactored inline styles)
+   ========================================================================== */
+.generation-box {
+    background: var(--panel-dark);
+    padding: 4rem;
+    border-radius: 24px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 4rem;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.node-offset-up {
+    transform: translateY(-42px);
+}
+.node-offset-down {
+    transform: translateY(42px);
+}
+
+/* ==========================================================================
    DESKTOP-FIRST MEDIA QUERIES (Wird im nächsten Schritt auf Mobile-First umgebaut)
    ========================================================================== */
 @media (max-width: 968px) {
@@ -1714,12 +1759,27 @@
 
     /* Subpage Hero Badge Mobile */
     .subpage-hero-badge {
-        bottom: 1rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 90%;
-        justify-content: center;
-        padding: 0.8rem 1rem;
+        position: static;
+        margin: 2rem auto 0 auto;
+    }
+    
+    /* Mietwerkstatt Mobile Overrides */
+    .feature-grid-6 {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-bottom: 4rem;
+    }
+    .dashboard-mockup-section {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        margin-bottom: 4rem;
+    }
+    
+    /* Uebernahme Mobile Overrides */
+    .generation-box {
+        grid-template-columns: 1fr;
+        padding: 2rem 1.5rem;
+        gap: 2rem;
     }
 
     /* Target CTA Profiles Mobile */
@@ -1756,15 +1816,22 @@
     .timeline-hz-content-1 { grid-column: 2; grid-row: 1; align-self: center; }
     .timeline-hz-content-2 { grid-column: 2; grid-row: 2; align-self: center; }
     .timeline-hz-content-3 { grid-column: 2; grid-row: 3; align-self: center; }
+    .timeline-hz-content-top { grid-column: 2; grid-row: 1; align-self: center; }
+    .timeline-hz-content-bottom { grid-column: 2; grid-row: 3; align-self: center; }
     
     .timeline-hz-content-1::after,
     .timeline-hz-content-2::after,
-    .timeline-hz-content-3::after {
-        top: 20px; left: -10px; bottom: auto;
-        transform: none;
-        border-width: 10px 10px 10px 0;
-        border-color: transparent #fff transparent transparent;
-        filter: drop-shadow(-2px 0 2px rgba(0,0,0,0.02));
+    .timeline-hz-content-3::after,
+    .timeline-hz-content-top::after,
+    .timeline-hz-content-bottom::after {
+        display: none !important;
+    }
+    
+    .timeline-hz-node {
+        transform: none !important;
+    }
+    .node-offset-up, .node-offset-down {
+        transform: none !important;
     }
     
     /* Journey Theme Mobile Fallback */
