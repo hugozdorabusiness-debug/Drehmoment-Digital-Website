@@ -528,6 +528,11 @@
     top: 0; right: 0; width: 50%; height: 100%;
     background: radial-gradient(circle at 100% 50%, rgba(232,84,10,0.08) 0%, transparent 70%);
 }
+.independence-box .func-text p {
+    color: #cbd5e1 !important; /* Deutlich helleres Grau für starken Kontrast */
+    font-size: 1.05rem !important; /* Größer für bessere Lesbarkeit */
+    line-height: 1.6 !important;
+}
 
 .k-icon {
     width: 48px;
