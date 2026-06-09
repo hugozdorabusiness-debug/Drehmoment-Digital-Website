@@ -24,6 +24,12 @@
     padding: 0.8rem 2rem;
 }
 
+.header-left {
+    display: flex;
+    align-items: center;
+    gap: 3rem; /* Abstand zwischen Zurück-Button und Logo */
+}
+
 .logo-container {
     height: auto;
     display: flex;
@@ -42,6 +48,7 @@
 .nav-links {
     display: flex;
     gap: 2.5rem;
+    align-items: center;
 }
 
 .nav-links a {
@@ -57,9 +64,57 @@
 }
 
 /* Uwe Hoffmann Glow für aktiven Punkt */
-.nav-links a.active {
-    color: var(--accent-orange);
+.nav-links a.active, .dropdown-trigger.active {
+    color: var(--accent-orange) !important;
     text-shadow: 0 0 15px rgba(232, 84, 10, 0.6);
+}
+
+/* DROPDOWN MENU */
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 1rem 0; /* größere Hover-Fläche */
+}
+.dropdown-menu {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background: #1e293b;
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 12px;
+    padding: 0.5rem;
+    min-width: 220px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    z-index: 100;
+}
+.nav-dropdown:hover .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+.dropdown-menu a {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: #94A3B8 !important;
+    font-size: 0.95rem;
+    font-weight: 500;
+    border-radius: 8px;
+    text-shadow: none !important;
+    text-align: left;
+}
+.dropdown-menu a:hover {
+    background: rgba(255,255,255,0.05);
+    color: #fff !important;
+}
+.dropdown-menu a.active {
+    color: var(--accent-orange) !important;
+    background: rgba(232,84,10,0.1);
 }
 
 .cta-nav .btn-primary {
