@@ -1120,9 +1120,9 @@
 
 .footer-grid {
     display: grid;
-    grid-template-columns: 2fr 1fr 1.5fr 1fr;
+    grid-template-columns: 2fr 1.5fr 1.5fr 1fr 1fr;
     gap: 4rem;
-    margin-bottom: 5rem;
+    align-items: start;
 }
 
 .footer-col h4 {
@@ -1727,6 +1727,21 @@
     }
     
     /* Vorher-Nachher Vergleich Mobile */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        text-align: center;
+    }
+    
+    .footer-col {
+        padding-right: 0 !important;
+    }
+
+    .footer-col ul {
+        display: inline-block;
+        text-align: left;
+    }
+    
     .comparison-grid {
         grid-template-columns: 1fr;
         gap: 1.5rem;
