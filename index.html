@@ -714,35 +714,41 @@
 
             // ScrollSpy Logic
             const sections = document.querySelectorAll("section[id]");
-            const navLinks = document.querySelectorAll(".nav-links a[href^='index.html#'], .nav-links a[href^='#']");
+            const navLinks = document.querySelectorAll(".nav-links a[href*='#']");
 
-            const updateScrollSpy = () => {
-                let current = "";
-                sections.forEach((section) => {
-                    const sectionTop = section.offsetTop;
-                    const sectionHeight = section.clientHeight;
-                    // Trigger around 1/3 down the viewport
-                    if (scrollY >= (sectionTop - window.innerHeight / 3)) {
-                        current = section.getAttribute("id");
+            function updateScrollSpy() {
+                let scrollPosition = window.scrollY || document.documentElement.scrollTop;
+                
+                // Add a small offset so it triggers slightly before hitting the exact pixel
+                let currentSectionId = "";
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop - 150;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+                    
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionBottom) {
+                        currentSectionId = section.getAttribute("id");
                     }
                 });
 
-                // Fallback to first section if at top
-                if (scrollY < 100 && sections.length > 0) {
-                    current = sections[0].getAttribute("id");
+                // Fallback for the very top
+                if (scrollPosition < 100 && sections.length > 0) {
+                    currentSectionId = sections[0].getAttribute("id");
                 }
 
-                navLinks.forEach((link) => {
+                navLinks.forEach(link => {
                     link.classList.remove("active");
                     const href = link.getAttribute("href");
-                    if (current && (href === `#${current}` || href === `index.html#${current}`)) {
+                    if (currentSectionId && href && href.endsWith(`#${currentSectionId}`)) {
                         link.classList.add("active");
                     }
                 });
-            };
+            }
 
-            window.addEventListener("scroll", updateScrollSpy);
-            updateScrollSpy(); // Trigger immediately on load
+            window.addEventListener("scroll", updateScrollSpy, { passive: true });
+            // Initial trigger
+            setTimeout(updateScrollSpy, 100);
+            updateScrollSpy();
 
             // Contact Form Logic
             const contactForm = document.getElementById('contact-form');
