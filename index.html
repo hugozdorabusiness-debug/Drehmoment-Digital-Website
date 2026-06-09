@@ -193,12 +193,19 @@
 
 
     <!-- ================== ZIELGRUPPEN ================== -->
-    <section class="section-padding" id="zielgruppen" style="background-color: var(--panel-dark); color: #fff;">
+    <section class="section-padding" id="zielgruppen" style="background-color: var(--bg-surface); color: #1e293b;">
+        <style>
+            #zielgruppen .target-card-content { color: #475569; }
+            #zielgruppen .target-card-content h3 { color: #1e293b; }
+            #zielgruppen .target-card-content .target-list li { color: #475569; }
+            #zielgruppen .btn-outline { border-color: #cbd5e1 !important; color: #1e293b !important; }
+            #zielgruppen .btn-outline:hover { background-color: var(--accent-orange) !important; color: #fff !important; border-color: var(--accent-orange) !important; }
+        </style>
         <div class="container-wide">
             <p class="warum-kicker fade-up" style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Maßgeschneidert & Individuell</p>
-            <h2 class="fade-up" style="text-align: center; margin-bottom: 1.5rem; color: #fff; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Die exakt passende Lösung für <span class="highlight-text">Deinen Betrieb</span></h2>
+            <h2 class="fade-up" style="text-align: center; margin-bottom: 1.5rem; color: #1e293b; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Die exakt passende Lösung für <span class="highlight-text">Deinen Betrieb</span></h2>
             <p class="fade-up lead"
-                style="text-align: center; color: #94A3B8; max-width: 750px; margin: 0 auto 5rem auto;">Wir kennen die täglichen Herausforderungen der Kfz-Branche. Egal ob klassische freie Werkstatt, komplexer Mischhandel oder spezialisiertes Miet-Modell – wir bauen dir ein digitales System, das individuell auf deine Anforderungen zugeschnitten ist. Drei Praxis-Beispiele:</p>
+                style="text-align: center; color: #64748b; max-width: 750px; margin: 0 auto 5rem auto;">Wir kennen die täglichen Herausforderungen der Kfz-Branche. Egal ob klassische freie Werkstatt, komplexer Mischhandel oder spezialisiertes Miet-Modell – wir bauen dir ein digitales System, das individuell auf deine Anforderungen zugeschnitten ist. Drei Praxis-Beispiele:</p>
 
             <div class="target-stack">
                 <!-- Target 1: Mischbetrieb -->
@@ -279,13 +286,23 @@
 
     <!-- ================== PROZESS ================== -->
     <section class="section-padding"
-        style="background-color: var(--bg-surface); border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;"
+        style="background-color: var(--panel-dark); border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);"
         id="prozess">
+        <style>
+            #prozess .timeline-node { background: #0c0e12; color: #fff; border-color: var(--accent-orange); }
+            #prozess .timeline-content-acc { background: rgba(255,255,255,0.02); border-color: rgba(255,255,255,0.1); }
+            #prozess .timeline-summary h3 { color: #fff !important; }
+            #prozess .timeline-summary p { color: #94a3b8 !important; }
+            #prozess .timeline-details li { color: #cbd5e1 !important; }
+            #prozess .timeline-step.step-left .timeline-content-acc::after { border-color: transparent transparent transparent rgba(255,255,255,0.02); }
+            #prozess .timeline-step.step-right .timeline-content-acc::after { border-color: transparent rgba(255,255,255,0.02) transparent transparent; }
+            #prozess .timeline-node[style*="background: #f8fafc;"] { background: rgba(232,84,10,0.1) !important; }
+        </style>
         <div class="container">
             <p class="warum-kicker fade-up" style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Der Prozess</p>
-            <h2 class="fade-up" style="text-align: center; margin-bottom: 1.5rem; color: #1e293b; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Ein klarer, <span class="highlight-text">zielgerichteter</span> Prozess</h2>
+            <h2 class="fade-up" style="text-align: center; margin-bottom: 1.5rem; color: #fff; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Ein klarer, <span class="highlight-text">zielgerichteter</span> Prozess</h2>
             <p class="fade-up lead"
-                style="text-align: center; color: var(--text-muted); max-width: 600px; margin: 0 auto 4rem auto;">Unser
+                style="text-align: center; color: #94a3b8; max-width: 600px; margin: 0 auto 4rem auto;">Unser
                 Vorgehen ist exakt strukturiert und verlangt dir kaum Zeit ab. Fokussiere dich komplett auf dein
                 Tagesgeschäft – wir kümmern uns um deine digitale Dominanz.</p>
 
@@ -392,10 +409,15 @@
     </section>
 
     <!-- ================== LÖSUNG ================== -->
-    <section class="section-padding" id="loesung">
+    <section class="section-padding" id="loesung" style="background-color: var(--panel-dark);">
+        <style>
+            #loesung .system-card h3 { color: #fff; }
+            #loesung .system-card p { color: #94A3B8; }
+            #loesung .bento-glass-light { background: rgba(15, 23, 42, 0.65); }
+        </style>
         <div class="container">
             <p class="warum-kicker fade-up" style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Die digitale KFZ-Sichtbarkeit</p>
-            <h2 class="fade-up" style="text-align: center; margin-bottom: 3rem; color: #1e293b; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Ein <span class="highlight-text">schlüsselfertiges</span> System</h2>
+            <h2 class="fade-up" style="text-align: center; margin-bottom: 3rem; color: #fff; font-size: clamp(2rem, 3.5vw, 3.2rem); line-height: 1.1;">Ein <span class="highlight-text">schlüsselfertiges</span> System</h2>
 
             <div class="system-grid">
                 <div class="system-card bento-hero fade-up">
@@ -464,11 +486,11 @@
         </div>
     </section>
     <!-- ================== REFERENZEN (LIVE DEMO) ================== -->
-    <section class="section-padding" id="projekte">
+    <section class="section-padding" id="projekte" style="background-color: var(--bg-surface);">
         <div class="container fade-up">
             <p class="warum-kicker" style="color: var(--accent-orange); text-align: center; text-transform: uppercase; letter-spacing: 2px; font-size: 0.9rem; font-weight: 700; margin-bottom: 0.5rem;">Proof of Concept</p>
-            <h2 style="text-align: center; margin-bottom: 1.5rem; font-size: clamp(2.5rem, 4vw, 3.5rem);">Echte <span class="highlight-text">Ergebnisse.</span></h2>
-            <p class="lead" style="text-align: center; margin-bottom: 4rem; color: var(--text-muted); max-width: 600px; margin-left: auto; margin-right: auto;">Überzeuge dich selbst. Teste unsere Arbeit live in diesem interaktiven Demo-Fenster oder öffne das Projekt in voller Größe.</p>
+            <h2 style="text-align: center; margin-bottom: 1.5rem; color: #1e293b; font-size: clamp(2.5rem, 4vw, 3.5rem);">Echte <span class="highlight-text">Ergebnisse.</span></h2>
+            <p class="lead" style="text-align: center; margin-bottom: 4rem; color: #64748b; max-width: 600px; margin-left: auto; margin-right: auto;">Überzeuge dich selbst. Teste unsere Arbeit live in diesem interaktiven Demo-Fenster oder öffne das Projekt in voller Größe.</p>
 
             <div class="browser-mockup"
                 style="border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 40px 100px -20px rgba(0,0,0,0.25); border: 1px solid rgba(232, 84, 10, 0.15); background: #fff;">
