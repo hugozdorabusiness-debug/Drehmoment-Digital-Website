@@ -692,7 +692,7 @@
 
             // --- ROCK-SOLID SCROLL SPY ---
             const sections = document.querySelectorAll("section[id]");
-            const navLinks = document.querySelectorAll(".nav-links a[href*='#']");
+            const navLinks = document.querySelectorAll(".nav-links a");
 
             function updateScrollSpy() {
                 let scrollPosition = window.scrollY || document.documentElement.scrollTop;
@@ -714,7 +714,13 @@
                 navLinks.forEach(link => {
                     link.classList.remove("active");
                     const href = link.getAttribute("href");
+                    
                     if (currentSectionId && href && href.endsWith(`#${currentSectionId}`)) {
+                        link.classList.add("active");
+                    }
+                    
+                    // Spezialfall: Der Hebel Sektion (kontrolle) leuchtet den deep-dive.html Link
+                    if (currentSectionId === "kontrolle" && href && href.includes("deep-dive.html")) {
                         link.classList.add("active");
                     }
                 });
