@@ -27,7 +27,7 @@
 .header-left {
     display: flex;
     align-items: center;
-    gap: 3rem; /* Abstand zwischen Zurück-Button und Logo */
+    gap: 6rem; /* Verdoppelter Abstand, Button rückt massiv nach links */
 }
 
 .logo-container {
@@ -75,46 +75,49 @@
     display: flex;
     align-items: center;
     height: 100%;
-    padding: 1rem 0; /* größere Hover-Fläche */
+    padding: 1.5rem 0; /* Vergrößerte Hover-Fläche für nahtlosen Übergang */
 }
 .dropdown-menu {
     position: absolute;
-    top: 80%;
+    top: 100%;
     left: 50%;
-    transform: translateX(-50%) translateY(10px);
-    background: #1e293b;
+    transform: translateX(-50%) translateY(15px); /* Startet leicht nach unten versetzt */
+    background: #0c0e12; /* Exakt gleiche Farbe wie der Header! */
     border: 1px solid rgba(255,255,255,0.05);
-    border-radius: 12px;
-    padding: 0.5rem;
-    min-width: 220px;
+    border-top: 2px solid var(--accent-orange); /* Kleines orangefarbenes Highlight oben */
+    border-radius: 0 0 12px 12px; /* Nur unten abgerundet für homogenen Look */
+    padding: 0.8rem 0.5rem;
+    min-width: 240px;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.3s ease;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); /* Seidenweiche Slide-Down Animation */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.5);
     z-index: 100;
 }
 .nav-dropdown:hover .dropdown-menu {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0); /* Gleitet elegant an seinen Platz */
 }
 .dropdown-menu a {
     display: block;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem 1.2rem;
     color: #94A3B8 !important;
     font-size: 0.95rem;
     font-weight: 500;
     border-radius: 8px;
     text-shadow: none !important;
     text-align: left;
+    transition: all 0.2s ease;
 }
 .dropdown-menu a:hover {
-    background: rgba(255,255,255,0.05);
+    background: rgba(255,255,255,0.03);
     color: #fff !important;
+    padding-left: 1.5rem; /* Sanfter Hover-Slide nach rechts */
 }
 .dropdown-menu a.active {
     color: var(--accent-orange) !important;
-    background: rgba(232,84,10,0.1);
+    background: rgba(232,84,10,0.05);
 }
 
 .cta-nav .btn-primary {
