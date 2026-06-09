@@ -94,9 +94,18 @@
         </div>
 
         <!-- HORIZONTAL TIMELINE (Außerhalb des 1200px Containers für volle Breite) -->
-        <div class="timeline-hz-container fade-up">
-                <!-- Die durchgehende Linie mit Pfeil -->
-                <div class="timeline-hz-line"></div>
+        <div class="timeline-hz-container journey-theme fade-up">
+            <!-- WAVY SVG LINE -->
+            <div class="journey-wave-container">
+                <svg class="journey-wave" preserveAspectRatio="none" viewBox="0 0 1000 100" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M 0,50 Q 166,-10 500,50 T 990,50" fill="none" stroke="var(--accent-orange)" stroke-width="3" stroke-dasharray="10,10" vector-effect="non-scaling-stroke" />
+                    <!-- Pfeilspitze -->
+                    <polygon points="985,40 1000,50 985,60" fill="var(--accent-orange)" />
+                </svg>
+            </div>
+            
+            <!-- Die klassische Linie für Mobile-Fallback (wird auf Desktop per CSS ausgeblendet) -->
+            <div class="timeline-hz-line"></div>
                 
                 <!-- Nodes (Knotenpunkte auf der Linie) -->
                 <div class="timeline-hz-node timeline-hz-node-1">01</div>
