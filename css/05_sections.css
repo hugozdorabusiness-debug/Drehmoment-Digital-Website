@@ -1462,6 +1462,43 @@
         letter-spacing: 2px;
     }
     
+    .nav-dropdown {
+        height: auto;
+        padding: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    .nav-dropdown > a {
+        margin-bottom: 0;
+    }
+    .dropdown-menu {
+        position: static;
+        transform: none !important;
+        opacity: 1;
+        visibility: visible;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1.2rem;
+        min-width: auto;
+    }
+    .dropdown-menu a {
+        font-size: 1.2rem;
+        padding: 0;
+        color: #94A3B8 !important;
+        text-align: center;
+    }
+    .dropdown-menu a:hover {
+        background: transparent;
+        padding-left: 0;
+        color: #fff !important;
+    }
+    
     .hero-bg-overlay {
         background: rgba(15, 23, 42, 0.85); /* Dunkler auf Mobile für absolute Lesbarkeit */
     }
@@ -1523,10 +1560,10 @@
         gap: 2.5rem;
     }
     
-    /* Mobile für neue Subpage Elemente */
+    /* Mobile für neue Subpage Elemente & Bugfixes */
     .subpage-hero-grid {
         grid-template-columns: 1fr;
-        gap: 3rem;
+        gap: 2.5rem;
     }
     .subpage-hero-text {
         order: 1;
@@ -1534,6 +1571,29 @@
     }
     .subpage-hero-visual {
         order: 2;
+        aspect-ratio: 4/3; /* Verhindert winzige oder extrem hohe Bilder auf Mobile */
+        width: 100%;
+        height: auto;
+    }
+    
+    /* Vorher-Nachher Vergleich Mobile */
+    .comparison-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        margin-top: 2rem;
+    }
+    .comparison-card {
+        padding: 1.8rem; /* Reduzierter Whitespace auf Mobile */
+    }
+
+    /* Feature Items Mobile (Die 3 Boxen unter dem Hero) */
+    .k-feature-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 1.5rem 1rem;
+        gap: 1rem;
+        height: auto;
     }
 
     /* Mobile Hz Timeline */
