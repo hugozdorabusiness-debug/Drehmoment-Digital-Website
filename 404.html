@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Seite nicht gefunden | Drehmoment Digital</title>
+    <meta name="description" content="Ups! Hier bist du wohl falsch abgebogen.">
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" type="image/png" href="logo_transparent.png">
+    <link rel="stylesheet" href="css/01_variables.css">
+    <link rel="stylesheet" href="css/02_typography.css">
+    <link rel="stylesheet" href="css/03_layout.css">
+    <link rel="stylesheet" href="css/04_components.css">
+    <link rel="stylesheet" href="css/05_sections.css">
+    
+    <style>
+        .error-section {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: var(--bg-main);
+            color: var(--text-main);
+        }
+        .error-content h1 {
+            font-size: clamp(4rem, 10vw, 8rem);
+            color: var(--accent-orange);
+            margin-bottom: 1rem;
+            line-height: 1;
+        }
+        .error-content h2 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 2rem;
+        }
+        .error-content p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 3rem;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="header-inner">
+            <div class="header-left">
+                <a href="index.html" target="_self" class="logo-link">
+                    <img src="./drehmoment_digital_transparent-removeb ohne supslogan.png" alt="Drehmoment Digital Logo" class="header-logo-img">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <a href="index.html#start">Start</a>
+                <a href="index.html#warum-wir">Warum wir?</a>
+                <a href="deep-dive.html">Der Hebel</a>
+                <a href="index.html#prozess">Prozess</a>
+                <a href="index.html#loesung">System</a>
+            </nav>
+            <div class="cta-nav">
+                <a href="index.html#kontakt" class="btn-primary">JETZT KONTAKT AUFNEHMEN &rarr;</a>
+            </div>
+            <button class="mobile-nav-toggle" aria-label="Menü öffnen"><span></span><span></span><span></span></button>
+        </div>
+    </header>
+
+    <!-- 404 CONTENT -->
+    <section class="error-section">
+        <div class="container fade-up">
+            <div class="error-content">
+                <h1>404</h1>
+                <h2>Hier klemmt's.</h2>
+                <p>Diese Seite existiert leider nicht (mehr). Vielleicht hast du dich vertippt oder wir haben etwas umgebaut. Lass uns den Werkzeugkasten wieder zumachen und zurück auf die Startlinie gehen.</p>
+                <a href="index.html" class="btn btn-primary btn-large glow-effect">Zurück zur Startseite</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col" style="padding-right: 2rem;">
+                    <img src="logo_transparent.png" alt="Drehmoment Digital" class="footer-logo" style="height: 140px; margin-bottom: 2rem;">
+                    <p style="font-size: 1.1rem; line-height: 1.6;">Wir bringen deine Werkstatt auf die regionale Ideallinie. Präzise, messbar, marktführend.</p>
+                </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="index.html#warum-wir">Agentur-Philosophie</a></li>
+                        <li><a href="index.html#loesung">Unser System</a></li>
+                        <li><a href="index.html#prozess">Der Ablauf</a></li>
+                        <li><a href="index.html#projekte">Projekte</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Kontakt</h4>
+                    <ul>
+                        <li><a href="https://wa.me/491633778849?text=Hallo%20Drehmoment%20Digital,%20ich%20brauche%20Unterst%C3%BCtzung%20bei%20meinem%20Webauftritt." target="_blank">0163 - 377 88 49</a></li>
+                        <li><a href="mailto:kontakt@drehmoment-digital.de">kontakt@drehmoment-digital.de</a></li>
+                        <li><br>Made along the A40 / NRW.</li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Rechtliches</h4>
+                    <ul>
+                        <li><a href="impressum.html">Impressum</a></li>
+                        <li><a href="datenschutz.html">Datenschutz</a></li>
+                        <li><a href="agb.html">AGB</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 3rem; padding-bottom: 2rem; color: #475569; font-size: 0.95rem; font-weight: 500; letter-spacing: 1px;">
+                &copy; 2026 DREHMOMENT DIGITAL. ALL RIGHTS RESERVED.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const mobileToggle = document.querySelector('.mobile-nav-toggle');
+            const navLinks = document.querySelector('.nav-links');
+            if(mobileToggle && navLinks) {
+                mobileToggle.addEventListener('click', () => {
+                    mobileToggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                    document.body.classList.toggle('nav-open');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
